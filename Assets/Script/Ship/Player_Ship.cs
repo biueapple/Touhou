@@ -15,8 +15,8 @@ public class Player_Ship : MonoBehaviour
     public Animator Animator { get { return animator; } }
 
     [SerializeField]
-    private Move move;
-    public Move Move => move;
+    private ShipMove move;
+    public ShipMove Move => move;
     [SerializeField]
     private Module module;
     public Module Module => module;
@@ -40,8 +40,8 @@ public class Player_Ship : MonoBehaviour
         state?.UpdateState();
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
+    //private void OnTriggerEnter(Collider other)
+    //{
         
-    }
+    //}
 }

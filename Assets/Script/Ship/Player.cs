@@ -14,9 +14,10 @@ public class Player : MonoBehaviour
             {
                 instance = FindFirstObjectByType<Player>();
                 if (instance == null)
+                {
                     instance = new GameObject("Player").AddComponent<Player>();
+                }
             }
-                
             return instance;
         }
     }
@@ -52,13 +53,18 @@ public class Player : MonoBehaviour
     public void AddPower(float amount)
     {
         if (power + amount > 5)
-            amount = 5 - power;
-        Power += amount;
-        foreach (var weapon in ship.Module.Weapons)
         {
-            if (amount <= 0) break;
-            float used = weapon.AddDamage(amount);
-            amount -= used;
+            amount = 5 - power;
+        }
+        Power += amount;
+        if (ship != null)
+        {
+            foreach (var weapon in ship.Module.Weapons)
+            {
+                if (amount <= 0) break;
+                float used = weapon.AddDamage(amount);
+                amount -= used;
+            }
         }
     }
 
@@ -70,25 +76,36 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (ship == null)
+        {
             return;
+        }
 
         if (record)
         {
             Enter();
             if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
                 ship.State = ship.ShiftState;
+            }
             if (Input.GetKeyUp(KeyCode.LeftShift))
+            {
                 ship.State = ship.NomalState;
+            }
 
             if (Input.GetKey(KeyCode.Z))
             {
-                ship.Module?.Fire();
+                if (ship.Module != null)
+                {
+                    ship.Module.Fire();
+                }
             }
-            replay?.RecordInput();
-        }   
+            if(replay != null)
+                replay.RecordInput();
+        }
         else
         {
-            replay?.PlaybackInput();
+            if (replay != null)
+                replay.PlaybackInput();
         }
     }
 

@@ -1,21 +1,21 @@
 using UnityEngine;
 
-public class Move : MonoBehaviour
+public class ShipMove : MonoBehaviour
 {
     private Vector3 velocity = Vector3.zero;
     public Vector3 Velocity { get { return velocity; } set { velocity = value; } }
+    [SerializeField]
     private float speed;
     public float Speed { get => speed; set { speed = value; } }
 
     void Update()
     {
-        move();
+        Move();
     }
 
-    private void move()
+    private void Move()
     {
         transform.position += speed * Time.deltaTime * velocity;
-        transform.position = new Vector2(Mathf.Clamp(transform.position.x, -InfoStatic.MapSize.x, InfoStatic.MapSize.x), Mathf.Clamp(transform.position.y, -InfoStatic.MapSize.y, InfoStatic.MapSize.y));
         velocity = Vector3.zero;
     }
 }
