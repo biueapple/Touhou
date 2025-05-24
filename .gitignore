@@ -1,0 +1,66 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+MemoryCaptures/
+UserSettings/
+ScriptAssemblies/
+.hlslcache/
+
+# Asset meta data should only be ignored when the corresponding asset is also ignored
+*.pidb
+*.booproj
+*.svd
+
+# Unity Asset Store tools
+[Aa]ssets/AssetStoreTools*
+
+# VS/JetBrains project files
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+
+# Rider project files
+.idea/
+*.sln.iml
+
+# VSCode
+.vscode/
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# Git
+*.orig
+*.lock
+
+# Crash logs
+sysinfo.txt
+
+# Built-in Unity Burst compiler caches (can be very large)
+**/com.unity.burst/**/.burst/
+**/com.unity.burst/**/.LLVM/
+
+# Local caches
+.localhistory/
