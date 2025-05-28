@@ -132,12 +132,6 @@ public class Player : MonoBehaviour
     public void Enter()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
-        if (horizontal > 0)
-            ship.Animator.SetTrigger("Right");
-        else if (horizontal < 0)
-            ship.Animator.SetTrigger("Left");
-        else
-            ship.Animator.SetTrigger("Idle");
         float vertical = Input.GetAxisRaw("Vertical");
         ship.Move.Velocity = new Vector3(horizontal, vertical, 0);
     }

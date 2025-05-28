@@ -1,32 +1,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Bezier", menuName = "Move/Bezier")]
-public class MoveBezier : MoveTo
+public class MoveBezier : MoveType
 {
-    public override Vector3[] Init(Vector3[] points)
-    {        
-        if (points.Length == 0)
-            return points;
-        List<Vector3> list = new();
+    public int resolution = 20;
 
-        float distance = 0;
+    public override Vector3[] GeneratePath(Transform[] points)
+    {
+        if (points.Length < 2)
+            return new Vector3[0];
 
-        for (int i = 0; i < points.Length - 1; i++)
-            distance += Vector3.Distance(points[i], points[i + 1]);
-
-        float t = 0;
-
-        Vector3 vector = points[0];
-        while(t <= 1)
+        List<Vector3> path = new ();
+        for (int i = 0; i < points.Length - 1; i += 2)
         {
-            for (int i = 0; i < points.Length; i++)
+            Vector3 p0 = points[i].position;
+            Vector3 p1 = (i + 1 < points.Length) ? points[i + 1].position : p0;
+            Vector3 p2 = (i + 2 < points.Length) ? points[i + 2].position : p1;
+
+            for (int j = 0; j < resolution; j++)
             {
-                vector += Vector3.Lerp(vector, points[i], t);
+                float t = j / (float)resolution;
+                Vector3 pos = Mathf.Pow(1 - t, 2) * p0 +
+                              2 * (1 - t) * t * p1 +
+                              Mathf.Pow(t, 2) * p2;
+                path.Add(pos);
             }
-            t += distance / 1;
-            list.Add(vector);
         }
-        return list.ToArray();
+
+        return path.ToArray();
     }
 }

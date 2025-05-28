@@ -37,5 +37,6 @@ public class STGManager : MonoBehaviour
     private void Awake()
     {
         Random.InitState(0);
+        Application.targetFrameRate = 60;
     }
 }

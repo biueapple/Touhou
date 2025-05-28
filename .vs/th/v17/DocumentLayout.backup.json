@@ -1,0 +1,167 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\duqor\\Desktop\\th\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB06BF2-E905-681E-9B51-54E5B3998AD9}|Assembly-CSharp-Editor.csproj|c:\\users\\duqor\\desktop\\th\\assets\\script\\move\\editor\\movepointeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB06BF2-E905-681E-9B51-54E5B3998AD9}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\script\\move\\editor\\movepointeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\move\\movetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\move\\movetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\move\\moveobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\move\\moveobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\move\\movebezier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\move\\movebezier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\move\\waitmovetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\move\\waitmovetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\move\\moveforword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\move\\moveforword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\ship\\shipmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\ship\\shipmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\stgmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\stgmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\bullet\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bullet\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MovePointEditor.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\Editor\\MovePointEditor.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Move\\Editor\\MovePointEditor.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\Editor\\MovePointEditor.cs",
+              "RelativeToolTip": "Assets\\Script\\Move\\Editor\\MovePointEditor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T15:15:19.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MoveType.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\MoveType.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Move\\MoveType.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\MoveType.cs",
+              "RelativeToolTip": "Assets\\Script\\Move\\MoveType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T14:38:14.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MoveForword.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\MoveForword.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Move\\MoveForword.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\MoveForword.cs",
+              "RelativeToolTip": "Assets\\Script\\Move\\MoveForword.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T13:06:30.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MoveObject.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\MoveObject.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Move\\MoveObject.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\MoveObject.cs",
+              "RelativeToolTip": "Assets\\Script\\Move\\MoveObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T13:06:07.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WaitMoveType.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\WaitMoveType.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Move\\WaitMoveType.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\WaitMoveType.cs",
+              "RelativeToolTip": "Assets\\Script\\Move\\WaitMoveType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T09:57:10.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MoveBezier.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\MoveBezier.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Move\\MoveBezier.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\MoveBezier.cs",
+              "RelativeToolTip": "Assets\\Script\\Move\\MoveBezier.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T13:13:06.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "STGManager.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\STGManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\STGManager.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\STGManager.cs",
+              "RelativeToolTip": "Assets\\Script\\STGManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T14:34:19.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ShipMove.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Ship\\ShipMove.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Ship\\ShipMove.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Ship\\ShipMove.cs",
+              "RelativeToolTip": "Assets\\Script\\Ship\\ShipMove.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T12:58:21.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Bullet.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Bullet\\Bullet.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Bullet\\Bullet.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Bullet\\Bullet.cs",
+              "RelativeToolTip": "Assets\\Script\\Bullet\\Bullet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T13:03:37.507Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,10 +1,14 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Forword", menuName = "Move/Forword")]
-public class MoveForword : MoveTo
+public class StraightMoveType : MoveType
 {
-    public override Vector3[] Init(Vector3[] points)
+    public override Vector3[] GeneratePath(Transform[] points)
     {
-        return points;        
+        Vector3[] path = new Vector3[points.Length];
+        for (int i = 0; i < points.Length; i++)
+        {
+            path[i] = points[i].position;
+        }
+        return path;
     }
 }
