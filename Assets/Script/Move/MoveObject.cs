@@ -63,5 +63,6 @@ public class MoveObject : MonoBehaviour
         //currentPath = mp.moveType.GeneratePath(mp.points);
         //currentPathIndex = 0;
         currentPathIndex++;
+        index = 0;
     }
 }

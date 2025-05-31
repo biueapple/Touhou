@@ -11,20 +11,20 @@ public class MoveBezier : MoveType
             return new Vector3[0];
 
         List<Vector3> path = new ();
-        for (int i = 0; i < points.Length - 1; i += 2)
-        {
-            Vector3 p0 = points[i].position;
-            Vector3 p1 = (i + 1 < points.Length) ? points[i + 1].position : p0;
-            Vector3 p2 = (i + 2 < points.Length) ? points[i + 2].position : p1;
 
-            for (int j = 0; j < resolution; j++)
-            {
-                float t = j / (float)resolution;
-                Vector3 pos = Mathf.Pow(1 - t, 2) * p0 +
-                              2 * (1 - t) * t * p1 +
-                              Mathf.Pow(t, 2) * p2;
-                path.Add(pos);
-            }
+        Vector3 p0 = points[0].position;
+        Vector3 p1 = points[1].position;
+        Vector3 p2 = points[2].position;
+        Vector3 p3 = points[3].position;
+
+        for (int j = 0; j <= resolution; j++)
+        {
+            float t = j / (float)resolution;
+            Vector3 point = Mathf.Pow(1 - t, 3) * p0 +
+                            3 * Mathf.Pow(1 - t, 2) * t * p1 +
+                            3 * (1 - t) * Mathf.Pow(t, 2) * p2 +
+                            Mathf.Pow(t, 3) * p3;
+            path.Add(point);
         }
 
         return path.ToArray();

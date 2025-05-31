@@ -19,28 +19,38 @@ public abstract class MoveType : MonoBehaviour
     //모든 path를 이동했다면 Completion호출
     public virtual Vector3 GetPath(MoveObject moveObject)
     {
-        float distance = moveObject.Speed * Time.deltaTime;
-        Vector3 newPosition = moveObject.transform.position;
-        while (distance > 0)
+        if (Vector3.Distance(moveObject.transform.position, path[(int)moveObject.Index]) < 0.1f)
+            moveObject.Index++;
+        if(path.Length <= moveObject.Index)
         {
-            Vector3 position = newPosition;
-            newPosition = Vector3.MoveTowards(position, path[(int)moveObject.Index], distance);
-            float magnitude = (position - newPosition).magnitude;
-            Debug.Log("magnitude " + magnitude + ", distance " + distance);
-            //원하는만큼 이동 했다는 뜻
-            if (distance > magnitude)
-            {
-                distance -= magnitude;
-                moveObject.Index++;
-            }
-            
-            if ((int)moveObject.Index >= path.Length)
-            {
-                Completion(moveObject);
-                break;
-            }
+            Completion(moveObject);
+            return moveObject.transform.position;
         }
-        return newPosition;
+        return path[(int)moveObject.Index];
+        //float distance = moveObject.Speed * Time.deltaTime;
+        //Vector3 newPosition = moveObject.transform.position;
+        //while (distance > 0)
+        //{
+        //    Vector3 position = newPosition;
+        //    newPosition = Vector3.MoveTowards(position, path[(int)moveObject.Index], distance);
+        //    float magnitude = (position - newPosition).magnitude;
+        //    Debug.Log("magnitude " + magnitude + ", distance " + distance);
+        //    //원하는만큼 이동 했다는 뜻
+        //    if (distance > magnitude)
+        //    {
+        //        distance -= magnitude;
+        //        moveObject.Index++;
+        //    }
+            
+        //    if ((int)moveObject.Index >= path.Length)
+        //    {
+        //        Completion(moveObject);
+        //        break;
+        //    }
+        //}
+        //return newPosition;
+
+
     }
     //모든 경로 이동 완료
     protected void Completion(MoveObject moveObject)
