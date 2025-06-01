@@ -40,8 +40,8 @@ public class Player_Ship : MonoBehaviour
         state?.UpdateState();
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-        
-    //}
+    public void Hit()
+    {
+
+    }
 }

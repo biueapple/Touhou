@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class HomingBullet : Bullet
 {
-    private void Update()
+    public override void Tick()
     {
         Enemy enemy = STGManager.Instance.NearEnemy(transform.position);
         if(enemy != null)

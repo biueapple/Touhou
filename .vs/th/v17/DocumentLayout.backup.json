@@ -3,36 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\duqor\\Desktop\\th\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\move\\movetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\move\\movetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|c:\\users\\duqor\\desktop\\th\\assets\\script\\bullet\\patton\\randomshotbulletpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bullet\\patton\\randomshotbulletpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCB06BF2-E905-681E-9B51-54E5B3998AD9}|Assembly-CSharp-Editor.csproj|c:\\users\\duqor\\desktop\\th\\assets\\script\\move\\editor\\movepointeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCB06BF2-E905-681E-9B51-54E5B3998AD9}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\script\\move\\editor\\movepointeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\bullet\\patton\\homingbulletpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bullet\\patton\\homingbulletpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\move\\moveobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\move\\moveobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\bullet\\patton\\patterninstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bullet\\patton\\patterninstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\move\\movebezier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\move\\movebezier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|c:\\users\\duqor\\desktop\\th\\assets\\script\\bullet\\bulletshooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bullet\\bulletshooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\move\\moveforword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\move\\moveforword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\bullet\\patton\\spiralbulletpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bullet\\patton\\spiralbulletpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\ship\\shipmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\ship\\shipmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\bullet\\patton\\circularbulletpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bullet\\patton\\circularbulletpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|c:\\users\\duqor\\desktop\\th\\assets\\script\\move\\gizmos\\movepointgizmos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\move\\gizmos\\movepointgizmos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\bullet\\patton\\bulletpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bullet\\patton\\bulletpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\move\\waitmovetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\move\\waitmovetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\ship\\player_ship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\ship\\player_ship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\stgmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,6 +41,34 @@
     {
       "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\bullet\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bullet\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\attack\\attack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\attack\\attack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\etc\\objectpooling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\etc\\objectpooling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\bullet\\bulletmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bullet\\bulletmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\bullet\\bulletdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bullet\\bulletdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\attack\\homingbullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\attack\\homingbullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|C:\\Users\\duqor\\Desktop\\th\\assets\\script\\etc\\limitspace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD5201C-9018-D91E-F5AF-CC78AD538A90}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\etc\\limitspace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,97 +78,70 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MovePointGizmos.cs",
-              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\Gizmos\\MovePointGizmos.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Move\\Gizmos\\MovePointGizmos.cs",
-              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\Gizmos\\MovePointGizmos.cs",
-              "RelativeToolTip": "Assets\\Script\\Move\\Gizmos\\MovePointGizmos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T15:17:04.612Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MovePointEditor.cs",
-              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\Editor\\MovePointEditor.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Move\\Editor\\MovePointEditor.cs",
-              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\Editor\\MovePointEditor.cs",
-              "RelativeToolTip": "Assets\\Script\\Move\\Editor\\MovePointEditor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T15:15:19.825Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MoveType.cs",
-              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\MoveType.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Move\\MoveType.cs",
-              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\MoveType.cs",
-              "RelativeToolTip": "Assets\\Script\\Move\\MoveType.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACEAAAAjAAAAAAAAAA==",
+              "Title": "RandomShotBulletPattern.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Bullet\\Patton\\RandomShotBulletPattern.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Bullet\\Patton\\RandomShotBulletPattern.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Bullet\\Patton\\RandomShotBulletPattern.cs",
+              "RelativeToolTip": "Assets\\Script\\Bullet\\Patton\\RandomShotBulletPattern.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T14:38:14.473Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MoveForword.cs",
-              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\MoveForword.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Move\\MoveForword.cs",
-              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\MoveForword.cs",
-              "RelativeToolTip": "Assets\\Script\\Move\\MoveForword.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T13:06:30.168Z",
+              "WhenOpened": "2025-06-01T08:17:40.312Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MoveObject.cs",
-              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\MoveObject.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Move\\MoveObject.cs",
-              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\MoveObject.cs",
-              "RelativeToolTip": "Assets\\Script\\Move\\MoveObject.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAB8AAAAKAAAAAAAAAA==",
+              "Title": "PatternInstance.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Bullet\\Patton\\PatternInstance.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Bullet\\Patton\\PatternInstance.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Bullet\\Patton\\PatternInstance.cs",
+              "RelativeToolTip": "Assets\\Script\\Bullet\\Patton\\PatternInstance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T13:06:07.853Z",
+              "WhenOpened": "2025-06-01T08:07:02.089Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomingBulletPattern.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Bullet\\Patton\\HomingBulletPattern.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Bullet\\Patton\\HomingBulletPattern.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Bullet\\Patton\\HomingBulletPattern.cs",
+              "RelativeToolTip": "Assets\\Script\\Bullet\\Patton\\HomingBulletPattern.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:24:04.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SpiralBulletPattern.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Bullet\\Patton\\SpiralBulletPattern.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Bullet\\Patton\\SpiralBulletPattern.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Bullet\\Patton\\SpiralBulletPattern.cs",
+              "RelativeToolTip": "Assets\\Script\\Bullet\\Patton\\SpiralBulletPattern.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:17:50.452Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "WaitMoveType.cs",
-              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\WaitMoveType.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Move\\WaitMoveType.cs",
-              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\WaitMoveType.cs",
-              "RelativeToolTip": "Assets\\Script\\Move\\WaitMoveType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAtAAAAAAAAAA==",
+              "Title": "Player_Ship.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Ship\\Player_Ship.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Ship\\Player_Ship.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Ship\\Player_Ship.cs",
+              "RelativeToolTip": "Assets\\Script\\Ship\\Player_Ship.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T09:57:10.112Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MoveBezier.cs",
-              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\MoveBezier.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Move\\MoveBezier.cs",
-              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Move\\MoveBezier.cs",
-              "RelativeToolTip": "Assets\\Script\\Move\\MoveBezier.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T13:13:06.242Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T06:44:32.296Z"
             },
             {
               "$type": "Document",
@@ -150,22 +151,130 @@
               "RelativeDocumentMoniker": "Assets\\Script\\STGManager.cs",
               "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\STGManager.cs",
               "RelativeToolTip": "Assets\\Script\\STGManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T14:34:19.566Z"
+              "WhenOpened": "2025-06-01T06:19:40.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BulletShooter.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Bullet\\BulletShooter.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Bullet\\BulletShooter.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Bullet\\BulletShooter.cs",
+              "RelativeToolTip": "Assets\\Script\\Bullet\\BulletShooter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T06:15:30.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Enemy\\Enemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\Enemy.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Enemy\\Enemy.cs",
+              "RelativeToolTip": "Assets\\Script\\Enemy\\Enemy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T04:15:25.5Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ShipMove.cs",
-              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Ship\\ShipMove.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Ship\\ShipMove.cs",
-              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Ship\\ShipMove.cs",
-              "RelativeToolTip": "Assets\\Script\\Ship\\ShipMove.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Title": "CircularBulletPattern.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Bullet\\Patton\\CircularBulletPattern.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Bullet\\Patton\\CircularBulletPattern.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Bullet\\Patton\\CircularBulletPattern.cs",
+              "RelativeToolTip": "Assets\\Script\\Bullet\\Patton\\CircularBulletPattern.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T12:58:21.971Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T04:12:22.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BulletPattern.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Bullet\\Patton\\BulletPattern.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Bullet\\Patton\\BulletPattern.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Bullet\\Patton\\BulletPattern.cs",
+              "RelativeToolTip": "Assets\\Script\\Bullet\\Patton\\BulletPattern.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T04:11:40.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "HomingBullet.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Attack\\HomingBullet.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Attack\\HomingBullet.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Attack\\HomingBullet.cs",
+              "RelativeToolTip": "Assets\\Script\\Attack\\HomingBullet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T04:03:17.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BulletData.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Bullet\\BulletData.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Bullet\\BulletData.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Bullet\\BulletData.cs",
+              "RelativeToolTip": "Assets\\Script\\Bullet\\BulletData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T03:45:28.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LimitSpace.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\ETC\\LimitSpace.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ETC\\LimitSpace.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\ETC\\LimitSpace.cs",
+              "RelativeToolTip": "Assets\\Script\\ETC\\LimitSpace.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T03:45:05.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Attack.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Attack\\Attack.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Attack\\Attack.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Attack\\Attack.cs",
+              "RelativeToolTip": "Assets\\Script\\Attack\\Attack.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T03:21:41.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BulletManager.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Bullet\\BulletManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Bullet\\BulletManager.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Bullet\\BulletManager.cs",
+              "RelativeToolTip": "Assets\\Script\\Bullet\\BulletManager.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T03:17:27.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ObjectPooling.cs",
+              "DocumentMoniker": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\ETC\\ObjectPooling.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ETC\\ObjectPooling.cs",
+              "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\ETC\\ObjectPooling.cs",
+              "RelativeToolTip": "Assets\\Script\\ETC\\ObjectPooling.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T20:37:25.498Z"
             },
             {
               "$type": "Document",
@@ -175,7 +284,7 @@
               "RelativeDocumentMoniker": "Assets\\Script\\Bullet\\Bullet.cs",
               "ToolTip": "C:\\Users\\duqor\\Desktop\\th\\Assets\\Script\\Bullet\\Bullet.cs",
               "RelativeToolTip": "Assets\\Script\\Bullet\\Bullet.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-24T13:03:37.507Z"
             }

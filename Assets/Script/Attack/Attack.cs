@@ -3,7 +3,7 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     [SerializeField]
-    protected Bullet bullet;
+    protected BulletData data;
     [SerializeField]
     protected float currentDamage = 0;
     public float CurrentDamage { get { return currentDamage; } set { currentDamage = Mathf.Min(value, maxDamage); } }
@@ -22,7 +22,7 @@ public class Attack : MonoBehaviour
     {
         timer = Time.time;
         currentDamage = 0; 
-        ObjectPooling.Instance.Registration<Attack>(GetHashCode(), bullet);
+        ObjectPooling.Instance.Registration(data.bulletId, data.bulletPrefab);
     }
 
     public void Fire()
@@ -38,12 +38,7 @@ public class Attack : MonoBehaviour
 
     private void CreateBullet(Vector3 position, float damage, Vector3 dir, float speed)
     {
-        Bullet b = ObjectPooling.Instance.CreateBullet(GetHashCode());
-        b.transform.position = position;
-        b.Damage = damage;
-        b.Velocity = dir;
-        b.Speed = speed;
-        //ObjectPooling.Instance.DestroyBullet(b, InfoStatic.DestroyTimer);
+        BulletManager.Instance.FireBullet(position, dir, damage, speed, data.bulletId);
     }
 
     public float AddDamage(float amount)

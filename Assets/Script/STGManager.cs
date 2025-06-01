@@ -38,5 +38,6 @@ public class STGManager : MonoBehaviour
     {
         Random.InitState(0);
         Application.targetFrameRate = 60;
+
     }
 }

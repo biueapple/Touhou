@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda5229257b5fba47b6f405d02bb5ac6, type: 3}
+  m_Name: Reinu_Attack1
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: -4946257925673293683, guid: dda412dad00f69743b13c9b96dc817c3, type: 3}
+  bulletId: 0
