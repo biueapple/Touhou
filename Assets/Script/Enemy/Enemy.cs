@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    //체력
     [SerializeField]
     private Item item;
     [SerializeField]
@@ -19,15 +20,10 @@ public class Enemy : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-    
-    void Start()
-    {
-        
-    }
 
+    //발사를 당담하는 클래스 (STGManager에서 get으로 사용중)
+    [SerializeField]
+    private BulletShooter bulletShooter;
+    public BulletShooter BulletShooter { get { return bulletShooter; } }
     
-    void Update()
-    {
-        
-    }
 }

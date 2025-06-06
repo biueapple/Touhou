@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 538181806931471807}
   - component: {fileID: 4855465626352980254}
   - component: {fileID: 7523479003094130578}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Power1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4667242650266984977}
   - component: {fileID: 2054737609795659149}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

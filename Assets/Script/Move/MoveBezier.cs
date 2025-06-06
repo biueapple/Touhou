@@ -1,10 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//적의 움직임 패턴 베지어 곡선
 public class MoveBezier : MoveType
 {
+    //경로의 갯수
     public int resolution = 20;
 
+    //point를 기반으로 경로를 만들어 리턴
     public override Vector3[] GeneratePath(Transform[] points)
     {
         if (points.Length < 2)

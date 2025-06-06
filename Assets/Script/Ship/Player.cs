@@ -43,15 +43,20 @@ public class Player : MonoBehaviour
         }
     }
 
+    //기체
     [SerializeField]
     private Player_Ship ship;
     public Player_Ship Ship { get { return ship; } set { ship = value; } }
+
+    //리플레이 (수정 필요)
     [SerializeField]
     private Replay replay;
     public bool record = true;
 
+    //파워를 회득 시 호출
     public void AddPower(float amount)
     {
+        //파워의 최대치는 5
         if (power + amount > 5)
         {
             amount = 5 - power;
@@ -75,14 +80,20 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        //기체가 없다면 아무것도 하지 않음
         if (ship == null)
         {
             return;
         }
 
+        //이 구간을 사용자 입력으로 받든 리플레이로 인해 받든 적용되도록 수정이 필요한 구간
+
+        //리플레이 기록중 (정상 플레이중)
         if (record)
         {
+            //움직임 키 입력 받아서 적용
             Enter();
+            //상태변화 키 입력 받아서 적용
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 ship.State = ship.ShiftState;
@@ -92,6 +103,7 @@ public class Player : MonoBehaviour
                 ship.State = ship.NomalState;
             }
 
+            //공격 입력 받아서 적용
             if (Input.GetKey(KeyCode.Z))
             {
                 if (ship.Module != null)
@@ -102,6 +114,7 @@ public class Player : MonoBehaviour
             if(replay != null)
                 replay.RecordInput();
         }
+        //리플레이 기록중이지 않음 (리플레이 재생중)
         else
         {
             if (replay != null)
@@ -109,6 +122,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    //리플레이로 받은 입력을 적용시키는 메소드
     public void ApplyInput(FrameInput frameInput)
     {
         Vector3 velocity = Vector3.zero;
@@ -129,6 +143,7 @@ public class Player : MonoBehaviour
         ship.Move.Velocity = velocity;
     }
 
+    //움직임에 대한 키 입력을 받는 메소드
     public void Enter()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");

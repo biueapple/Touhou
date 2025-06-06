@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2845bf6ffef1f99439e35ddd4405b3d1, type: 3}
   m_Name: Random Shot Bullet Pattern
   m_EditorClassIdentifier: 
-  bulletCount: 30
+  bulletCount: 15
   spreadAngle: 30

@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using UnityEngine;
 
+//플레이어의 입력값
 public struct FrameInput
 {
     public bool Up;
@@ -15,17 +16,23 @@ public struct FrameInput
     public bool ShiftUp;
 }
 
+//리플레이
 public class Replay : MonoBehaviour
 {
+    //플레이어가 입력한 모든 입력값을 기록
     List<FrameInput> inputRecord = new();
+    //리플레이 저장한걸 불러옴
     string[] files = null;
 
     private void Start()
     {
+        //모든 리플레이 불러오기
         LoadAll();
+        //씬을 이동할 일이 있을진 모르겠음
         DontDestroyOnLoad(this);
     }
 
+    //키 기록하는 메소드
     public void RecordInput()
     {
         FrameInput input = new()
@@ -42,23 +49,29 @@ public class Replay : MonoBehaviour
         inputRecord.Add(input);
     }
 
+    //현재 프레임
     public int currentFrame = 0;
-
+    //리플레이 재생
     public void PlaybackInput()
     {
+        //범위를 벗어난 입력
         if (currentFrame >= inputRecord.Count)
         {
+            //다시 리플레이 기록으로 넘어가기 (수정 필요함)
             Player.Instance.record = true;
             return;
         }
+        //그 프레임에 무슨 입력을 했는지 받아서
         FrameInput input = inputRecord[currentFrame];
 
         // 입력값을 실제 조작 대신 적용
         Player.Instance.ApplyInput(input);
 
+        //다음 프레임으로
         currentFrame++;
     }
 
+    //리플레이를 저장
     public void SaveReplay()
     {
         string json = JsonUtility.ToJson(new InputRecordWrapper { frames = inputRecord });
@@ -67,11 +80,13 @@ public class Replay : MonoBehaviour
         File.WriteAllText(path, json);
     }
 
+    //모든 리플레이 불러오기
     public void LoadAll()
     {
         files = Directory.GetFiles(Application.persistentDataPath, "replay_*.json");
     }
 
+    //파일 이름으로 리플레이 입력값 불러오기
     public List<FrameInput> LoadReplay(string filename)
     {
         string path = Path.Combine(Application.persistentDataPath, filename);
@@ -87,20 +102,7 @@ public class Replay : MonoBehaviour
         return data.frames;
     }
 
-    public List<FrameInput> LoadReplayFromFile(string fileName)
-    {
-        string path = Path.Combine(Application.persistentDataPath, fileName);
-        if (!File.Exists(path))
-        {
-            Debug.LogError("Replay file not found: " + path);
-            return null;
-        }
-
-        string json = File.ReadAllText(path);
-        InputRecordWrapper data = JsonUtility.FromJson<InputRecordWrapper>(json);
-        return data.frames;
-    }
-
+    //모든 리플레이 파일의 이름을 리턴
     public List<string> GetName()
     {
         return files.Select(path => Path.GetFileName(path)).ToList();
@@ -115,6 +117,7 @@ public class Replay : MonoBehaviour
     //}
 }
 
+//json으로 저장하기 위해 한번 래핑
 [Serializable]
 public class InputRecordWrapper
 {

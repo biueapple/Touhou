@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class ObjectPooling : MonoBehaviour
@@ -15,9 +14,10 @@ public class ObjectPooling : MonoBehaviour
         }
     }
 
+    //현재 만들어진 총알
     private readonly Dictionary<int, Queue<Bullet>> dictionary = new ();
 
-
+    //만들어진 총알 고유값을 기반으로 리턴받음
     public Bullet CreateBullet(int hash)
     {
         if (!dictionary.ContainsKey(hash) || dictionary[hash].Count == 0)
@@ -27,15 +27,19 @@ public class ObjectPooling : MonoBehaviour
         return bullet;
     }
 
+    //만들어진 총알을 다시 돌려놓기
     public void DestroyBullet(Bullet bullet)
     {
         bullet.gameObject.SetActive(false);
         dictionary[bullet.Hash].Enqueue(bullet);
     }
 
+    //총알을 등록함 (기본값은 300개 생성)
     public void Registration(int hash, Bullet b, int count = 300)
     {
-        dictionary[hash] = new();
+        if (!dictionary.ContainsKey(hash))
+            dictionary[hash] = new();
+
         for (int i = 0; i < count; i++)
         {
             Bullet bullet = Instantiate(b, transform);

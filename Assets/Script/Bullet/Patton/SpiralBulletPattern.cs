@@ -1,9 +1,12 @@
 using UnityEngine;
 
+//둥글게 발사하는 패턴
 [CreateAssetMenu(menuName = "BulletPattern/Spiral")]
 public class SpiralBulletPattern : BulletPattern
 {
+    //한 프레임에에 발사할 총알의 갯수
     public int bulletCount = 5;
+    //한 프레임에 움직일 다음 각도
     public float angleStep = 10f;
 
     public override PatternInstance CreateInstance()
@@ -15,6 +18,7 @@ public class SpiralBulletPattern : BulletPattern
 public class SpiralPatternInstance : PatternInstance
 {
     private SpiralBulletPattern pattern;
+    //현재 각도
     private float currentAngle = 0f;
 
     public SpiralPatternInstance(SpiralBulletPattern pattern)

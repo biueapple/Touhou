@@ -1,17 +1,23 @@
 using UnityEngine;
 
+//여러 이동 패턴을 이용해야 움직이는 클래스
 public class MoveObject : MonoBehaviour
 {
-    public MoveType[] movePoints;
+    //가지고 있는 움직임 패턴들
+    public MoveType[] moveTypes;
 
+    //현재 적용되고 있는 움직임 패턴
     [SerializeField]
     private int currentPathIndex = 0;
 
+    //기체를 실제로 움직이게 해주는 클래스
     private ShipMove move;
 
+    //움직임 패턴이 보고 참고할 인덱스 (현재 이 오브젝트가 어디까지 갔는지 {float인 이유는 wait타입이 어느정도 멈춰있었는지에 대한 타이머로도 사용하기 때문})
     [SerializeField]
     private float index = 0;
     public float Index { get { return index; } set { index = value; } }
+    //이 오브젝트의 속도
     public float Speed { get { return move.Speed; } }
 
     private void Start()
@@ -21,47 +27,21 @@ public class MoveObject : MonoBehaviour
 
     private void Update()
     {
-        if (movePoints == null)
+        if (moveTypes == null)
             return;
-        if (currentPathIndex >= movePoints.Length)
+        if (currentPathIndex >= moveTypes.Length)
             return;
-        Vector3 newPosition = movePoints[currentPathIndex].GetPath(this);
-        //Debug.Log(newPosition);
+        //움직임에 대한 방향을 받아
+        Vector3 newPosition = moveTypes[currentPathIndex].GetPath(this);
         Vector3 direction = (newPosition - transform.position);
         direction.z = 0f;
-        //Debug.Log(direction);
+        //실제 움직이게 해주는 클래스에 전달
         move.Velocity = direction;
-        //if (currentPath == null || currentPath.Length == 0 || currentSegment >= movePoints.Length)
-        //    return;
-
-        //Vector3 target = currentPath[currentPathIndex];
-        //Vector3 direction = (target - transform.position);
-        //direction.z = 0f;
-
-        //if (direction.magnitude < 0.1f)
-        //{
-        //    currentPathIndex++;
-        //    if (currentPathIndex >= currentPath.Length)
-        //    {
-        //        currentSegment++;
-        //        if (currentSegment >= movePoints.Length)
-        //        {
-        //            return;
-        //        }
-        //        else
-        //        {
-        //            SetNextPath();
-        //        }
-        //    }
-        //}
-        //move.Velocity = direction;
     }
 
+    //다음 움직임 패턴 적용
     public void SetNextPath()
     {
-        //MovePoint mp = movePoints[currentSegment];
-        //currentPath = mp.moveType.GeneratePath(mp.points);
-        //currentPathIndex = 0;
         currentPathIndex++;
         index = 0;
     }

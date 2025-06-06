@@ -1,9 +1,12 @@
 using UnityEngine;
 
+//실제 작동할 패턴을 생성해주는 클래스
 [CreateAssetMenu(menuName = "BulletPattern/RandomShot")]
 public class RandomShotBulletPattern : BulletPattern
 {
+    //한번에 발사될 총알의 개수
     public int bulletCount = 10;
+    //최대 최소의 각도 범위
     public float spreadAngle = 60f;
 
     public override PatternInstance CreateInstance()
@@ -21,6 +24,7 @@ public class RandomPatternInstance : PatternInstance
         this.pattern = pattern;
     }
 
+    //아래 방향으로 랜덤 범위 발사
     public override void Fire(Transform firePoint, int hash)
     {
         for (int i = 0; i < pattern.bulletCount; i++)

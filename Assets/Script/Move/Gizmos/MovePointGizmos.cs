@@ -1,8 +1,10 @@
 using UnityEngine;
 
+//적의 이동경로를 gizmos로 그려주는 클래스
 public class MovePointGizmos : MonoBehaviour
 {
-    public MoveType data; // 에디터나 코드에서 이 데이터를 할당
+    //적이 어디서 어디로 가는지에 대한 데이터
+    public MoveType data;
 
     private void OnDrawGizmos()
     {
@@ -13,6 +15,6 @@ public class MovePointGizmos : MonoBehaviour
 
         // 선 그리기
         for (int i = 0; i < data.Path.Length - 1; i++)
-            Gizmos.DrawLine(transform.position + data.Path[i], transform.position + data.Path[i + 1]);
+            Gizmos.DrawLine(data.Path[i], data.Path[i + 1]);
     }
 }
