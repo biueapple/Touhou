@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 //사용자 기체
@@ -54,6 +55,24 @@ public class Player_Ship : MonoBehaviour
     //플레이어가 맞았을 경우 호출되는 메소드 여기서 목숨이 까지고 다시 기체를 생성하고 하는 부분이 들어가야 함
     public void Hit()
     {
+        gameObject.SetActive(false);
+        //Player.Instance.Ship = null;
+        Player.Instance.Life -= 1;
+        STGManager.Instance.StartCoroutine(Respawn());
+    }
 
+    private IEnumerator Respawn()
+    {
+        yield return new WaitForSeconds(0.8f);
+        //Player.Instance.Ship = this;
+        nomalCollider.enabled = false;
+        shiftCollider.enabled = false;
+        transform.position = InfoStatic.spawnPoint;
+        gameObject.SetActive(true);
+        SpriteRenderer spriteRenderer = animator.GetComponent<SpriteRenderer>();
+        spriteRenderer.color = new Color(1, 1, 1, 0.5f);
+        yield return new WaitForSeconds(0.8f);
+        spriteRenderer.color = new Color(1, 1, 1, 1);
+        state.Collider.enabled = true;
     }
 }

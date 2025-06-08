@@ -21,6 +21,7 @@ public class HomingBullet : Bullet
         }
 
         // 전방 방향으로 이동
-        transform.position +=  Speed * Time.deltaTime * transform.up;
+        transform.position += speed.Evaluate(timeAlive) * Time.deltaTime * transform.up;
+        timeAlive += Time.deltaTime;
     }
 }

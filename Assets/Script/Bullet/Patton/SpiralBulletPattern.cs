@@ -26,13 +26,13 @@ public class SpiralPatternInstance : PatternInstance
         this.pattern = pattern;
     }
 
-    public override void Fire(Transform firePoint, int hash)
+    public override void Fire(Transform firePoint)
     {
         for (int i = 0; i < pattern.bulletCount; i++)
         {
             float angle = currentAngle + (pattern.angleStep * i);
             Vector3 dir = Quaternion.Euler(0, 0, angle) * Vector3.up;
-            BulletManager.Instance.FireBullet(firePoint.position, dir, 2, 2, hash);
+            BulletManager.Instance.FireBullet(firePoint.position, dir, 2, pattern.Speed, pattern.BulletDatas[0].bulletId);
         }
 
         currentAngle += pattern.angleStep;

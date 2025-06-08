@@ -7,16 +7,17 @@ public class Bullet : MonoBehaviour
     public int Hash { get { return hash; } set { hash = value; } }
 
     //총알의 대미지 (생성될때 넣어줌)
-    private float damage = 1;
+    protected float damage = 1;
     public float Damage { get { return damage; } set { damage = value; } }
 
     //총알이 가고자 하는 방향
-    private Vector3 direction = Vector3.up;
+    protected Vector3 direction = Vector3.up;
     public Vector3 Direction { get { return direction; } set { direction = value; } }
 
     //총알의 속도
-    private float speed;
-    public float Speed { get { return speed; } set { speed = value; } }
+    protected AnimationCurve speed;
+    public AnimationCurve Speed { get { return speed; } set { speed = value; } }
+    protected float timeAlive;
 
     //총알이 지금 활성화 상태인지 보험같은 느낌 (충돌, 범위를 벗어나면 false로)
     protected bool isActive = true;
@@ -39,7 +40,7 @@ public class Bullet : MonoBehaviour
     }
 
     //초기화
-    public virtual void Initialize(Vector3 dir, float damage, float speed)
+    public virtual void Initialize(Vector3 dir, float damage, AnimationCurve speed)
     {
         this.damage = damage;
         this.speed = speed;
@@ -51,7 +52,8 @@ public class Bullet : MonoBehaviour
     public virtual void Tick()
     {
         if (!isActive) return;
-        transform.position += direction * speed * Time.deltaTime;
+        transform.position += speed.Evaluate(timeAlive) * Time.deltaTime * direction;
+        timeAlive += Time.deltaTime;
     }
 
     //총알 비활성화

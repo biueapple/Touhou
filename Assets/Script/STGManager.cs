@@ -20,6 +20,12 @@ public class STGManager : MonoBehaviour
     private List<Enemy> enemies = new();
     public List<Enemy> Enemies { get { return enemies; } }
 
+    [SerializeField]
+    private WaveSpawner waveSpawner;
+
+    private bool playing = false;
+    public bool Playing { get { return playing; } set { playing = value; } }
+
     //가장 가까운 적을 리턴해주는 메소드
     public Enemy NearEnemy(Vector3 position)
     {
@@ -47,10 +53,14 @@ public class STGManager : MonoBehaviour
 
     private void Update()
     {
+        if (!playing)
+            return;
+
         //올바른 범위 안에 들어온 적만 공격을 하도록 (화면 밖으로 나간 적이 공격을 해선 안됌)
         for (int i = 0; i < enemies.Count; i++)
         {
             enemies[i].BulletShooter.Tick();
         }
+        waveSpawner.Flow();
     }
 }

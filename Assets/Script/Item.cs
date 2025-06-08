@@ -18,10 +18,4 @@ public class Item : MonoBehaviour
     [SerializeField]
     private ITEMTYPE type;
     public ITEMTYPE Type { get { return type; } }
-
-    private void Update()
-    {
-        //중력을 적용
-        transform.position += InfoStatic.Gravity * Time.deltaTime * Vector3.down;
-    }
 }

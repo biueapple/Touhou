@@ -8,4 +8,6 @@ public static class InfoStatic
     public static float Gravity = 0.8f;
     //아이템을 빨아당기는 힘
     public static float PullSpeed = 2;
+    //플레이어가 죽고 다시 태어나는 위치
+    public static Vector3 spawnPoint = new Vector3(0, -3.5f, 0);
 }

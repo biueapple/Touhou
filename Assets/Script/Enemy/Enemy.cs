@@ -4,10 +4,10 @@ public class Enemy : MonoBehaviour
 {
     //체력
     [SerializeField]
-    private Item item;
+    protected Item item;
     [SerializeField]
-    private float hp = 1;
-    public float HP 
+    protected float hp = 1;
+    public virtual float HP 
     { 
         get { return hp; } 
         set 
@@ -15,15 +15,20 @@ public class Enemy : MonoBehaviour
             hp = value;
             if (hp > 0)
                 return;
-            Instantiate(item, transform.position, Quaternion.identity);
-            STGManager.Instance.Enemies.Remove(this);
-            gameObject.SetActive(false);
+
+            Dead();
         }
     }
 
     //발사를 당담하는 클래스 (STGManager에서 get으로 사용중)
     [SerializeField]
-    private BulletShooter bulletShooter;
+    protected BulletShooter bulletShooter;
     public BulletShooter BulletShooter { get { return bulletShooter; } }
     
+    public void Dead()
+    {
+        ItemManager.Instance.CreateItem(item.Type.ToString(), transform.position);
+        STGManager.Instance.Enemies.Remove(this);
+        gameObject.SetActive(false);
+    }
 }

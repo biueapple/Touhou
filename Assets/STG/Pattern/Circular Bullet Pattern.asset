@@ -12,5 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03aa2a3ec980fa2489011acbe3862716, type: 3}
   m_Name: Circular Bullet Pattern
   m_EditorClassIdentifier: 
+  bulletDatas:
+  - {fileID: 11400000, guid: f3b7fa4893c981c45b43e880191d2bda, type: 2}
+  speed:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.023532689
+      value: 1.9990298
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9764673
+      value: 1.9990298
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   bulletCount: 12
-  radius: 1

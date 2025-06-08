@@ -7,19 +7,26 @@ public class HomingBulletPattern : BulletPattern
     //실제 작동할 클래스 생성
     public override PatternInstance CreateInstance()
     {
-        return new HomingPatternInstance();
+        return new HomingPatternInstance(this);
     }
 }
 
 //실제 패턴을 생성하는 클래스
 public class HomingPatternInstance : PatternInstance
 {
+    private readonly BulletPattern pattern;
+
+    public HomingPatternInstance(BulletPattern pattern)
+    {
+        this.pattern = pattern;
+    }
+
     //플레이어에게 발사
-    public override void Fire(Transform firePoint, int hash)
+    public override void Fire(Transform firePoint)
     {
         if (Player.Instance.Ship == null) return;
 
         Vector3 dir = (Player.Instance.Ship.transform.position - firePoint.position).normalized;
-        BulletManager.Instance.FireBullet(firePoint.position, dir, 2, 2, hash);
+        BulletManager.Instance.FireBullet(firePoint.position, dir, 2, pattern.Speed, pattern.BulletDatas[0].bulletId);
     }
 }

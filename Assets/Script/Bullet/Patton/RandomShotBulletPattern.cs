@@ -17,7 +17,7 @@ public class RandomShotBulletPattern : BulletPattern
 
 public class RandomPatternInstance : PatternInstance
 {
-    private RandomShotBulletPattern pattern;
+    private readonly RandomShotBulletPattern pattern;
 
     public RandomPatternInstance(RandomShotBulletPattern pattern)
     {
@@ -25,13 +25,13 @@ public class RandomPatternInstance : PatternInstance
     }
 
     //아래 방향으로 랜덤 범위 발사
-    public override void Fire(Transform firePoint, int hash)
+    public override void Fire(Transform firePoint)
     {
         for (int i = 0; i < pattern.bulletCount; i++)
         {
             float angle = Random.Range(-pattern .spreadAngle / 2f, pattern.spreadAngle / 2f);
             Vector3 direction = Quaternion.Euler(0, 0, angle) * Vector3.down;
-            BulletManager.Instance.FireBullet(firePoint.position, direction, 2, 2, hash);
+            BulletManager.Instance.FireBullet(firePoint.position, direction, 2, pattern.Speed, pattern.BulletDatas[0].bulletId);
         }
     }
 }

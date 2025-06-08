@@ -11,7 +11,7 @@ public class WaveSpawner : MonoBehaviour
     //어디까지 소환했는가
     private int spawnIndex;
 
-    void Update()
+    public void Flow()
     {
         if (wave == null || spawnIndex >= wave.Length)
             return;

@@ -18,7 +18,7 @@ public class CircularBulletPattern : BulletPattern
 public class CircularPatternInstance : PatternInstance
 {
     //자신을 생성한 오브젝트 (오브젝트 정보를 기반으로 작동하기에)
-    private CircularBulletPattern pattern;
+    private readonly CircularBulletPattern pattern;
 
     public CircularPatternInstance(CircularBulletPattern pattern)
     {
@@ -26,13 +26,13 @@ public class CircularPatternInstance : PatternInstance
     }
 
     //패턴 발사 (360도로 오브젝트의 bulletCount 만큼 발사)
-    public override void Fire(Transform firePoint, int hash)
+    public override void Fire(Transform firePoint)
     {
         for (int i = 0; i < pattern.bulletCount; i++)
         {
             float angle = 360f * i / pattern.bulletCount;
             Vector3 dir = Quaternion.Euler(0, 0, angle) * Vector3.up;
-            BulletManager.Instance.FireBullet(firePoint.position, dir, 2, 2, hash);
+            BulletManager.Instance.FireBullet(firePoint.position, dir, 2, pattern.Speed, pattern.BulletDatas[0].bulletId);
         }
     }
 }

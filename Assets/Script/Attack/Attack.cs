@@ -6,6 +6,10 @@ public class Attack : MonoBehaviour
     //총알에 대한 정보 스크립터블 오브젝트로 만들어져 있음
     [SerializeField]
     protected BulletData data;
+    [SerializeField]
+    protected AnimationCurve speed;
+
+
     //플레이어가 획득한 파워가 적용되는 공간 maxDamage까지 오르면 다음 무기의 currentDamage가 올라감
     //현재 대미지 (파워)
     [SerializeField]
@@ -25,7 +29,7 @@ public class Attack : MonoBehaviour
     //딜레이 시간을 재는 타이머
     protected float timer;
 
-    void Start()
+    void Awake()
     {
         //타이머와
         timer = Time.time;
@@ -43,15 +47,15 @@ public class Attack : MonoBehaviour
             return;
 
         //좌우에서 하나씩 발사
-        CreateBullet(transform.position + new Vector3(-0.1f, 0, 0), currentDamage * magnifying, Vector3.up, 6);
-        CreateBullet(transform.position + new Vector3(0.1f, 0, 0), currentDamage * magnifying, Vector3.up, 6);
+        CreateBullet(transform.position + new Vector3(-0.1f, 0, 0), currentDamage * magnifying, Vector3.up, speed);
+        CreateBullet(transform.position + new Vector3(0.1f, 0, 0), currentDamage * magnifying, Vector3.up, speed);
 
         //타이머 재설정
         timer = Time.time;
     }
 
     //총알을 생성하고 발사
-    private void CreateBullet(Vector3 position, float damage, Vector3 dir, float speed)
+    private void CreateBullet(Vector3 position, float damage, Vector3 dir, AnimationCurve speed)
     {
         //총알을 생성하고 발사하고 움직임까지 제어해줌
         BulletManager.Instance.FireBullet(position, dir, damage, speed, data.bulletId);

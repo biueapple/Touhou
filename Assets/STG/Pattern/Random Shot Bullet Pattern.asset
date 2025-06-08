@@ -12,5 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2845bf6ffef1f99439e35ddd4405b3d1, type: 3}
   m_Name: Random Shot Bullet Pattern
   m_EditorClassIdentifier: 
+  bulletDatas:
+  - {fileID: 11400000, guid: f3b7fa4893c981c45b43e880191d2bda, type: 2}
+  speed:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0051568747
+      value: 2.0128882
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0051569
+      value: 2.0128882
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   bulletCount: 15
   spreadAngle: 30

@@ -12,3 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e39799be809ccc499b8b6799d47f713, type: 3}
   m_Name: Homing Bullet Pattern
   m_EditorClassIdentifier: 
+  bulletDatas:
+  - {fileID: 11400000, guid: f3b7fa4893c981c45b43e880191d2bda, type: 2}
+  speed:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.06002602
+      value: 1.9966586
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.93997395
+      value: 1.9966586
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

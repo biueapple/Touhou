@@ -12,5 +12,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1ac1bdab999a74b9acf7046c61ed18, type: 3}
   m_Name: Spiral Bullet Pattern
   m_EditorClassIdentifier: 
+  bulletDatas:
+  - {fileID: 11400000, guid: f3b7fa4893c981c45b43e880191d2bda, type: 2}
+  speed:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.007943116
+      value: 4.9876556
+      inSlope: -11.043202
+      outSlope: -11.043202
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.25957412
+      value: 2.0334086
+      inSlope: -0.05436874
+      outSlope: -0.05436874
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.17985852
+    - serializedVersion: 3
+      time: 1.0050023
+      value: 2.0023215
+      inSlope: -0.041703764
+      outSlope: -0.041703764
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   bulletCount: 1
   angleStep: 10
