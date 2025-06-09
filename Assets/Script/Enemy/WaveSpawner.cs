@@ -31,12 +31,13 @@ public class WaveSpawner : MonoBehaviour
     public Enemy CreateEnemy(Enemy prefab, List<MoveType> moveTypes)
     {
         //위치는 moveType의 첫 위기에서 시작하기 때문에 첫 moveType이 waitmovetype이라면 에러가 남 (wait 는 첫위치가 존재하지 않음)
-        Enemy enemy = Instantiate(prefab, moveTypes[0].Point[0].position, Quaternion.identity);
+        Enemy enemy = Instantiate(prefab, moveTypes[0].Point[0].position, Quaternion.identity, transform);
         //적이 어떻게 움직어야 하는지 넣기
         if (enemy.TryGetComponent(out MoveObject move))
         {
             move.moveTypes = moveTypes.ToArray();
         }
+        enemy.gameObject.SetActive(true);
         return enemy;
     }
 }

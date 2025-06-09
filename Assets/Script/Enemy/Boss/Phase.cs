@@ -3,28 +3,20 @@ using UnityEngine;
 [System.Serializable]
 public abstract class Phase
 {
-    protected Enemy boss;
-    //패턴
+    protected Boss boss;
     [SerializeField]
-    protected BulletPattern[] bulletPatterns;
-    [SerializeField]
-    protected PatternInstance[] patternInstances;
+    protected PatternData[] patternDatas;
 
     //움직임
-    [SerializeField]
     protected MoveType[] moveTypes;
 
-    public virtual void Init(Enemy boss)
+    protected Phase next;
+
+    public virtual void Init(Boss boss, Phase next, MoveType[] moveTypes)
     {
         this.boss = boss;
-        for (int i = 0; i < bulletPatterns.Length; i++)
-        {
-            for (int j = 0; j < bulletPatterns[i].BulletDatas.Length; i++)
-            {
-                ObjectPooling.Instance.Registration(bulletPatterns[i].BulletDatas[j].bulletId, bulletPatterns[i].BulletDatas[j].bulletPrefab, 100);
-            }
-            patternInstances[i] = bulletPatterns[i].CreateInstance();
-        }
+        this.next = next;
+        this.moveTypes = moveTypes;
     }
     public abstract void Enter();
     public abstract void Excute();

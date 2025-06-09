@@ -52,7 +52,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 1697590553382550550, guid: 6ccf03166b2105c4aa31993a4fd439a1, type: 3}
   hp: 10
-  bulletShooter: {fileID: 3038988618121314000}
 --- !u!114 &7565133808345327068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,8 +93,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d4ca6cfd3a51ae41b777e02033f6f2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pattern: {fileID: 11400000, guid: 3c27d5f860e6a16409681f7bc976fbb1, type: 2}
-  fireDelay: 2
+  patternDatas:
+  - pattern: {fileID: 11400000, guid: 3c27d5f860e6a16409681f7bc976fbb1, type: 2}
+    fireDelay: 2
+    timer: 0
 --- !u!65 &4600084165677475092
 BoxCollider:
   m_ObjectHideFlags: 0

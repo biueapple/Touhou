@@ -29,7 +29,7 @@ public class MoveObject : MonoBehaviour
     {
         if (moveTypes == null)
             return;
-        if (currentPathIndex >= moveTypes.Length)
+        if (Arrival())
             return;
         //움직임에 대한 방향을 받아
         Vector3 newPosition = moveTypes[currentPathIndex].GetPath(this);
@@ -44,5 +44,19 @@ public class MoveObject : MonoBehaviour
     {
         currentPathIndex++;
         index = 0;
+    }
+
+    public void SetMoveType(MoveType[] moveTypes)
+    {
+        this.moveTypes = moveTypes;
+        index = 0;
+        currentPathIndex = 0;
+    }
+
+    public bool Arrival()
+    {
+        if (currentPathIndex >= moveTypes.Length)
+            return true;
+        return false;
     }
 }

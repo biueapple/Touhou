@@ -64,3 +64,6 @@ sysinfo.txt
 
 # Local caches
 .localhistory/
+
+# Ignore Visual Studio cache
+.vs/

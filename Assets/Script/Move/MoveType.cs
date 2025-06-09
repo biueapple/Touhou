@@ -51,4 +51,9 @@ public abstract class MoveType : MonoBehaviour
         //다음 이동 패턴을 사용하여 이동
         moveObject.SetNextPath();
     }
+    
+    public MoveType[] ToArray()
+    {
+        return new MoveType[1] { this };
+    }
 }

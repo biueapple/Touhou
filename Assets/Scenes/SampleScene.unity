@@ -930,6 +930,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: phase_1.moveTypes.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: 'phase_1.moveTypes.Array.data[0]'
+      value: 
+      objectReference: {fileID: 272766852}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: 'phase_1.moveTypes.Array.data[1]'
+      value: 
+      objectReference: {fileID: 154441240}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: phase_1.patternDatas.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: phase_1.bulletPatterns.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: appearancePhase.moveTypes.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: 'phase_1.bulletPatterns.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 3c27d5f860e6a16409681f7bc976fbb1, type: 2}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: 'appearancePhase.moveTypes.Array.data[0]'
+      value: 
+      objectReference: {fileID: 653080937}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: appearancePhase.patternDatas.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: phase_1.patternDatas.Array.data[0].pattern
+      value: 
+      objectReference: {fileID: 11400000, guid: 3c27d5f860e6a16409681f7bc976fbb1, type: 2}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: phase_1.patternDatas.Array.data[0].fireDelay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6194916785111347564, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
       propertyPath: m_Name
       value: Boss_1
@@ -943,6 +987,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+--- !u!114 &505768016 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+  m_PrefabInstance: {fileID: 505768015}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6826c9b69ec9c49b3c4b7d9e82702e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &511763410 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8577667790948910045, guid: f0abb07c3afd8954bbc32a8e123153c9, type: 3}
@@ -2269,6 +2324,12 @@ MonoBehaviour:
     moveTypes:
     - {fileID: 766552634}
     - {fileID: 1794816699}
+  - spawnTime: 10
+    enemyPrefab: {fileID: 505768016}
+    moveTypes:
+    - {fileID: 653080937}
+    - {fileID: 272766852}
+    - {fileID: 154441240}
 --- !u!4 &1366555009
 Transform:
   m_ObjectHideFlags: 0
