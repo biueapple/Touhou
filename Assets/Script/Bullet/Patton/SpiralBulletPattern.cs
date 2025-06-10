@@ -31,7 +31,7 @@ public class SpiralPatternInstance : PatternInstance
         for (int i = 0; i < pattern.bulletCount; i++)
         {
             float angle = currentAngle + (pattern.angleStep * i);
-            Vector3 dir = Quaternion.Euler(0, 0, angle) * Vector3.up;
+            Vector3 dir = Quaternion.Euler(0, 0, angle) * Vector3.up;   
             BulletManager.Instance.FireBullet(firePoint.position, dir, 2, pattern.Speed, pattern.BulletDatas[0].bulletId);
         }
 

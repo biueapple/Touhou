@@ -109,4 +109,12 @@ public class Player : MonoBehaviour
             ship.State = ship.ShiftState;
         ship.Move.Velocity = velocity;
     }
+
+    //플레이어와의 상대적인 방향을 리턴
+    public Vector3 RelativeDirection(Transform transform)
+    {
+        if(ship == null)
+            return Vector3.zero;
+        return ship.transform.position - transform.position;
+    }
 }

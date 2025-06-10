@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2913b8b8bbe4bc468b594e0635cfd2a, type: 3}
+  m_Name: Boss Pattern_1
+  m_EditorClassIdentifier: 
+  bulletDatas:
+  - {fileID: 11400000, guid: 55cbbda47cea5c344a9cff8c1574b549, type: 2}
+  speed:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.014381409
+      value: 4.9812813
+      inSlope: -2.846846
+      outSlope: -2.846846
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.29124337
+    - serializedVersion: 3
+      time: 0.21501315
+      value: 1.0193093
+      inSlope: -0.068336695
+      outSlope: -0.068336695
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.26094273
+    - serializedVersion: 3
+      time: 1.0046387
+      value: 0.99603665
+      inSlope: -0.029473001
+      outSlope: -0.029473001
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  bulletCount: 5
+  angleStep: 1

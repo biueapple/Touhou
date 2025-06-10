@@ -26,7 +26,8 @@ public class HomingPatternInstance : PatternInstance
     {
         if (Player.Instance.Ship == null) return;
 
-        Vector3 dir = (Player.Instance.Ship.transform.position - firePoint.position).normalized;
+        //Vector3 dir = (Player.Instance.Ship.transform.position - firePoint.position).normalized;
+        Vector3 dir = Player.Instance.RelativeDirection(firePoint);
         BulletManager.Instance.FireBullet(firePoint.position, dir, 2, pattern.Speed, pattern.BulletDatas[0].bulletId);
     }
 }
