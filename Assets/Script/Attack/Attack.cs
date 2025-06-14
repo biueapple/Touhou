@@ -19,6 +19,10 @@ public class Attack : MonoBehaviour
     [SerializeField]
     protected float magnifying = 1;
     public float Magnifying { get { return magnifying; } }
+    //대미지에 기본적으로 더해지는 값
+    [SerializeField]
+    protected float additional = 1;
+    public float Additional { get => additional; }
     //최대 대미지
     [SerializeField]
     protected float maxDamage = 1;
@@ -47,8 +51,8 @@ public class Attack : MonoBehaviour
             return;
 
         //좌우에서 하나씩 발사
-        CreateBullet(transform.position + new Vector3(-0.1f, 0, 0), currentDamage * magnifying, Vector3.up, speed);
-        CreateBullet(transform.position + new Vector3(0.1f, 0, 0), currentDamage * magnifying, Vector3.up, speed);
+        CreateBullet(transform.position + new Vector3(-0.1f, 0, 0), currentDamage * magnifying + additional, Vector3.up, speed);
+        CreateBullet(transform.position + new Vector3(0.1f, 0, 0), currentDamage * magnifying + additional, Vector3.up, speed);
 
         //타이머 재설정
         timer = Time.time;

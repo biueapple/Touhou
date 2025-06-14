@@ -47,13 +47,14 @@ public class BulletManager : MonoBehaviour
     }
 
     //총알을 발사하는 메소드 
-    public void FireBullet(Vector3 position, Vector3 direction, float damage, AnimationCurve speed, int hash)
+    public Bullet FireBullet(Vector3 position, Vector3 direction, float damage, AnimationCurve speed, int hash)
     {
-        var bullet = ObjectPooling.Instance.CreateBullet(hash); // 풀에서 가져옴
+        Bullet bullet = ObjectPooling.Instance.CreateBullet(hash); // 풀에서 가져옴
         bullet.transform.position = position;
+        bullet.transform.up = direction;
         bullet.Initialize(direction, damage, speed);
         bullet.gameObject.SetActive(true);
-        bullet.transform.up = direction;
         RegisterBullet(bullet);
+        return bullet;
     }
 }

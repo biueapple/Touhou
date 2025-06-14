@@ -42,9 +42,9 @@ public class ItemManager : MonoBehaviour
     {
         //풀링에 아이템 등록 (pooling 은 총알만 만들어져 있는 김에 여기서 해결해야겠다)
         //key값은 아이템이 가진 enum 과 동일
-        RegistItem("POWER1", power1, 30);
-        RegistItem("POWER10", power10, 10);
-        RegistItem("POINT1", point1, 50);
+        RegistItem("POWER1", power1, 100);
+        RegistItem("POWER10", power10, 30);
+        RegistItem("POINT1", point1, 500);
         RegistItem("POINT10", point10, 50);
         RegistItem("LIFE", life, 5);
         RegistItem("BOMB", bomb, 5);

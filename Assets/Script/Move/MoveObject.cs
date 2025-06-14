@@ -8,7 +8,7 @@ public class MoveObject : MonoBehaviour
 
     //현재 적용되고 있는 움직임 패턴
     [SerializeField]
-    private int currentPathIndex = 0;
+    public int currentPathIndex = 0;
 
     //기체를 실제로 움직이게 해주는 클래스
     private ShipMove move;

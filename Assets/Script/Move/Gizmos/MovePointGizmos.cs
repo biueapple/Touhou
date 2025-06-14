@@ -5,10 +5,11 @@ public class MovePointGizmos : MonoBehaviour
 {
     //적이 어디서 어디로 가는지에 대한 데이터
     public MoveType data;
+    public bool draw;
 
     private void OnDrawGizmos()
     {
-        if (data == null || data.Path == null || data.Path.Length == 0)
+        if (!draw || data == null || data.Path == null || data.Path.Length == 0)
             return;
 
         Gizmos.color = Color.cyan;

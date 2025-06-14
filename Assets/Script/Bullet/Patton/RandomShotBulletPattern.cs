@@ -4,9 +4,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "BulletPattern/RandomShot")]
 public class RandomShotBulletPattern : BulletPattern
 {
-    //한번에 발사될 총알의 개수
+    [Header("한번에 발사될 총알의 개수")]
     public int bulletCount = 10;
-    //최대 최소의 각도 범위
+    [Header("최대 최소의 각도 범위")]
     public float spreadAngle = 60f;
 
     public override PatternInstance CreateInstance()

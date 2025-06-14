@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "BulletPattern/Circular")]
 public class CircularBulletPattern : BulletPattern
 {
-    //패턴의 총알 생산 갯수
+    [Header("패턴의 총알 생산 갯수")]
     public int bulletCount = 12;
 
     //패턴을 생산

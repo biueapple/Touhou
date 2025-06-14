@@ -15,7 +15,7 @@ public class NomalState : IState
     {
         this.collider = collider;
         this.ship = ship;
-        speed = 2;
+        speed = 3.5f;
     }
 
     public void EnterState()

@@ -37,6 +37,10 @@ public class WaveSpawner : MonoBehaviour
         {
             move.moveTypes = moveTypes.ToArray();
         }
+        if(enemy.TryGetComponent(out Boss boss))
+        {
+            BossHPUI.Instance.SetBoss(boss);
+        }
         enemy.gameObject.SetActive(true);
         return enemy;
     }

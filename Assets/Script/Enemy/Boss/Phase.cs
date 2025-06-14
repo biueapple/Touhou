@@ -1,3 +1,4 @@
+using UnityEditor.ShaderGraph;
 using UnityEngine;
 
 [System.Serializable]
@@ -11,6 +12,8 @@ public abstract class Phase
     protected MoveType[] moveTypes;
 
     protected Phase next;
+
+    protected float moveTimer = 0;
 
     public virtual void Init(Boss boss, Phase next, MoveType[] moveTypes)
     {

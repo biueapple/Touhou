@@ -50,8 +50,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb8283b8534e3d4393d31c47361074d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 1697590553382550550, guid: 6ccf03166b2105c4aa31993a4fd439a1, type: 3}
-  hp: 10
+  item: {fileID: 919354030270814192, guid: 23b75071b6e51a34f8431656b8b0480b, type: 3}
+  probability: 0.5
+  hp: 5
 --- !u!114 &7565133808345327068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,8 +96,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patternDatas:
   - pattern: {fileID: 11400000, guid: 3c27d5f860e6a16409681f7bc976fbb1, type: 2}
-    fireDelay: 2
-    timer: 0
+    fireDelay: 10
+    timer: 9
 --- !u!65 &4600084165677475092
 BoxCollider:
   m_ObjectHideFlags: 0

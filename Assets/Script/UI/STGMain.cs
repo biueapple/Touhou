@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 //ui를 만들었지만 삭제되어서 아직 사용중이지는 않는 스크립트 귀찮아서 모든 ui를 여기서 관리하려고 했지만 역시 나누는게 맞는듯
 public class STGMain : MonoBehaviour
@@ -19,6 +19,10 @@ public class STGMain : MonoBehaviour
         }
     }
 
+    [SerializeField]
+    private GameObject mainmenu;
+    [SerializeField]
+    private GameObject[] panelUI;
     //게임 시작 버튼 역할
     [SerializeField]
     private TextMeshProUGUI start;
@@ -82,6 +86,9 @@ public class STGMain : MonoBehaviour
 
     private void Update()
     {
+        if (!mainmenu.activeSelf)
+            return;
+
         //키입력을 받아 위 아래로 메뉴를 선택
         if (Input.GetKeyDown(KeyCode.DownArrow))
             index = math.clamp(index + 1, 0, 6);
@@ -129,13 +136,7 @@ public class STGMain : MonoBehaviour
     //게임 시작 기능
     private void GameStart()
     {
-        //테스트 용도로 만들어 놓은 코드들
-        Player.Instance.Ship = ship;
-        ship.transform.position = InfoStatic.spawnPoint;
-        ship.gameObject.SetActive(true);
-        gameObject.SetActive(false);
-        STGManager.Instance.Playing = true;
-        Player.Instance.AddPower(0.1f);
+        OnGameObject();
         Player.Instance.PlayMode = new RecordMode();
     }
 
@@ -144,15 +145,10 @@ public class STGMain : MonoBehaviour
 
     }
 
+    //일단은 그냥 로드하지만 파일들을 로드한 다음 선택해서 재생하도록 해야함
     private void ReplayStart()
     {
-        //일단은 그냥 로드하지만 파일들을 로드한 다음 선택해서 재생하도록 해야함
-        Player.Instance.Ship = ship;
-        ship.transform.position = InfoStatic.spawnPoint;
-        ship.gameObject.SetActive(true);
-        gameObject.SetActive(false);
-        STGManager.Instance.Playing = true;
-        Player.Instance.AddPower(0.1f);
+        OnGameObject();
         Player.Instance.PlayMode = new ReplayMode();
     }
 
@@ -178,11 +174,7 @@ public class STGMain : MonoBehaviour
 
     public void MainMenu()
     {
-        Player.Instance.PlayMode = null;
-        gameObject.SetActive(true);
-        ship.gameObject.SetActive(false);
-        Player.Instance.PowerInit();
-        Player.Instance.Ship = null;
+        OffGameObject();
     }
 
     private void SetColor(TextMeshProUGUI text, float alpha)
@@ -190,5 +182,40 @@ public class STGMain : MonoBehaviour
         Color color = text.color;
         color.a = alpha;
         text.color = color;
+    }
+
+    private void OnGameObject()
+    {
+        //플레이어 기체 설정
+        Player.Instance.Ship = ship;
+        ship.transform.position = InfoStatic.spawnPoint;
+        ship.gameObject.SetActive(true);
+        Player.Instance.AddPower(0.1f);
+
+        //ui 설정
+        mainmenu.SetActive(false);
+        foreach (var item in panelUI)
+        {
+            item.SetActive(true);
+        }
+
+        //플레이 시작
+        STGManager.Instance.Playing = true;
+    }
+
+    private void OffGameObject()
+    {
+        //플레이어 기체 설정
+        Player.Instance.PlayMode = null;
+        Player.Instance.PowerInit();
+        Player.Instance.Ship = null;
+        ship.gameObject.SetActive(false);
+
+        //ui 설정
+        mainmenu.SetActive(true);
+        foreach (var item in panelUI)
+        {
+            item.SetActive(false);
+        }
     }
 }

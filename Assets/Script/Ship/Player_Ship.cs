@@ -56,15 +56,19 @@ public class Player_Ship : MonoBehaviour
     public void Hit()
     {
         gameObject.SetActive(false);
-        //Player.Instance.Ship = null;
         Player.Instance.Life -= 1;
         STGManager.Instance.StartCoroutine(Respawn());
+    }
+
+    public void Fire()
+    {
+        if (gameObject.activeSelf)
+            module.Fire();
     }
 
     private IEnumerator Respawn()
     {
         yield return new WaitForSeconds(0.8f);
-        //Player.Instance.Ship = this;
         nomalCollider.enabled = false;
         shiftCollider.enabled = false;
         transform.position = InfoStatic.spawnPoint;
@@ -74,5 +78,14 @@ public class Player_Ship : MonoBehaviour
         yield return new WaitForSeconds(0.8f);
         spriteRenderer.color = new Color(1, 1, 1, 1);
         state.Collider.enabled = true;
+    }
+
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<Enemy>() != null)
+        {
+            Hit();
+        }
     }
 }

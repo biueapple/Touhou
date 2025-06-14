@@ -46,6 +46,7 @@ public class Bullet : MonoBehaviour
         this.speed = speed;
         direction = dir.normalized;
         isActive = true;
+        timeAlive = 0;
     }
 
     //bulletManager에서 호출해주는 움직임 제어
@@ -57,7 +58,7 @@ public class Bullet : MonoBehaviour
     }
 
     //총알 비활성화
-    public void ReturnToPool()
+    public virtual void ReturnToPool()
     {
         isActive = false;
         BulletManager.Instance.UnregisterBullet(this);

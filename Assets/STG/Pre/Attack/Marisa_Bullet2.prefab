@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 4174964661100591521}
   - component: {fileID: 1899614838273577461}
   - component: {fileID: 8339319456439616713}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Marisa_Bullet2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

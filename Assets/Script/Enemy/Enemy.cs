@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
     //Ã¼·Â
     [SerializeField]
     protected Item item;
+    public float probability;
     [SerializeField]
     protected float hp = 1;
     public virtual float HP 
@@ -36,7 +37,8 @@ public class Enemy : MonoBehaviour
 
     public void Dead()
     {
-        ItemManager.Instance.CreateItem(item.Type.ToString(), transform.position);
+        if(Random.Range(0f, 1f) > probability)
+            ItemManager.Instance.CreateItem(item.Type.ToString(), transform.position);
         STGManager.Instance.Enemies.Remove(this);
         gameObject.SetActive(false);
     }

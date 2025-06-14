@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 4194639230398979478}
   - component: {fileID: -4946257925673293683}
   - component: {fileID: 985162711264593896}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Reimu_Bullet1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

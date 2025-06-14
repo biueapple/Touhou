@@ -131,7 +131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5481789543033077947
 Transform:
   m_ObjectHideFlags: 0
@@ -161,9 +161,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  hp: 100
-  bulletShooter: {fileID: 9105630891259630205}
-  patterns: []
+  probability: 0
+  hp: 700
+  maxHP: 700
+  appearancePhase:
+    patternDatas: []
+  phase_1:
+    patternDatas:
+    - pattern: {fileID: 11400000, guid: 6fc1b556c2296db4b950c11974f08063, type: 2}
+      fireDelay: 2
+      timer: 0
+    - pattern: {fileID: 11400000, guid: 3c27d5f860e6a16409681f7bc976fbb1, type: 2}
+      fireDelay: 1.2
+      timer: 0
+    - pattern: {fileID: 11400000, guid: 3873f1ba4d3ae3545a9c8f49b991b4b0, type: 2}
+      fireDelay: 3
+      timer: 0
+  phase_2:
+    patternDatas:
+    - pattern: {fileID: 11400000, guid: 9696098acc27c0044ba2caf4e219a006, type: 2}
+      fireDelay: 3.5
+      timer: 2
+    - pattern: {fileID: 11400000, guid: 8c51445da3c06d04b97ae3c418a424b8, type: 2}
+      fireDelay: 0.5
+      timer: 0
 --- !u!114 &5410952478723126429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,8 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d4ca6cfd3a51ae41b777e02033f6f2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pattern: {fileID: 0}
-  fireDelay: 1
+  patternDatas: []
 --- !u!114 &4485155021940218044
 MonoBehaviour:
   m_ObjectHideFlags: 0

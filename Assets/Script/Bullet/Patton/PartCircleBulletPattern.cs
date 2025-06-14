@@ -3,11 +3,11 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "BulletPattern/PartCircle")]
 public class PartCircleBulletPattern : BulletPattern
 {
-    //좌우로 추가로 발사할 총알의 갯수
+    [Header("좌우로 추가로 발사할 총알의 갯수")]
     public int bulletCount;
-    //총알의 간격
+    [Header("총알의 간격")]
     public int angle;
-    //실제 작동할 클래스 생성
+
     public override PatternInstance CreateInstance()
     {
         return new PartCirclePatternInstance(this);

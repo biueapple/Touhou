@@ -16,7 +16,7 @@ public class PatternData
     {
         for (int i = 0; i < pattern.BulletDatas.Length; i++)
         {
-            ObjectPooling.Instance.Registration(pattern.BulletDatas[i].bulletId, pattern.BulletDatas[i].bulletPrefab, 100);
+            ObjectPooling.Instance.Registration(pattern.BulletDatas[i].bulletId, pattern.BulletDatas[i].bulletPrefab);
         }
         patternInstance = pattern.CreateInstance();
     }

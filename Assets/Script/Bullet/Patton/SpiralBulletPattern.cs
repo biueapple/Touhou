@@ -4,9 +4,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "BulletPattern/Spiral")]
 public class SpiralBulletPattern : BulletPattern
 {
-    //한 프레임에에 발사할 총알의 갯수
+    [Header("한 프레임에에 발사할 총알의 갯수")]
     public int bulletCount = 5;
-    //한 프레임에 움직일 다음 각도
+    [Header("한 프레임에 움직일 다음 각도")]
     public float angleStep = 10f;
 
     public override PatternInstance CreateInstance()
