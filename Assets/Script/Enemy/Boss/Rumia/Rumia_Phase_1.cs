@@ -8,7 +8,7 @@ public class Rumia_Phase_1 : Phase
         boss.HP = boss.MaxHP;
         for (int i = 0; i < patternDatas.Length; i++)
         {
-            patternDatas[i].CreateInstance();
+            patternDatas[i].CreateInstance(boss);
         }
     }
 
@@ -30,7 +30,7 @@ public class Rumia_Phase_1 : Phase
 
         //일정 시간마다 랜덤하게 이동 (0번째는 사용하지 않음)
         moveTimer += Time.deltaTime;
-        if (moveTimer >= 5)
+        if (moveTimer >= moveTime)
         {
             boss.MoveObject.moveTypes = moveTypes[Random.Range(0, moveTypes.Length)].ToArray();
             boss.MoveObject.currentPathIndex = 0;

@@ -12,12 +12,12 @@ public class PatternData
     //딜레이를 계산하는 타이머
     public float timer;
 
-    public void CreateInstance()
+    public void CreateInstance(Enemy enemy)
     {
         for (int i = 0; i < pattern.BulletDatas.Length; i++)
         {
             ObjectPooling.Instance.Registration(pattern.BulletDatas[i].bulletId, pattern.BulletDatas[i].bulletPrefab);
         }
-        patternInstance = pattern.CreateInstance();
+        patternInstance = pattern.CreateInstance(enemy);
     }
 }

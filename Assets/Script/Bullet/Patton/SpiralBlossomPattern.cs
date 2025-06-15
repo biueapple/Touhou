@@ -4,14 +4,20 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "BulletPattern/SpiralBlossomPattern")]
 public class SpiralBlossomPattern : BulletPattern
 {
+    [SerializeField]
     [Header("1초에 증가할 각도")]
-    public float spiralSpeed = 60f;
+    private float spiralSpeed = 60f;
+    public float SpiralSpeed => spiralSpeed;
+
+    [SerializeField]
     [Header("다음 탄이 발사되는 딜레이")]
-    public float fireRate = 0.1f;
+    private float fireRate = 0.1f;
+    public float FireRate => fireRate;
+
     //패턴을 생산
-    public override PatternInstance CreateInstance()
+    public override PatternInstance CreateInstance(Enemy enemy)
     {
-        return new SpiralBlossomInstance(this);
+        return new SpiralBlossomInstance(this, enemy);
     }
 }
 
@@ -21,10 +27,12 @@ public class SpiralBlossomInstance : PatternInstance
 {
     //자신을 생성한 오브젝트 (오브젝트 정보를 기반으로 작동하기에)
     private readonly SpiralBlossomPattern pattern;
+    private readonly Enemy enemy;
 
-    public SpiralBlossomInstance(SpiralBlossomPattern pattern)
+    public SpiralBlossomInstance(SpiralBlossomPattern pattern, Enemy enemy)
     {
         this.pattern = pattern;
+        this.enemy = enemy;
     }
 
     public override void Fire(Transform firePoint)
@@ -38,6 +46,9 @@ public class SpiralBlossomInstance : PatternInstance
     {
         for (int wave = 0; wave < 30; wave++) // 한 패턴 동안 30회 발사
         {
+            if (!enemy.gameObject.activeSelf)
+                break;
+
             for (int i = 0; i < 12; i++)
             {
                 float theta = angle + (i * 30f);
@@ -45,8 +56,8 @@ public class SpiralBlossomInstance : PatternInstance
                 BulletManager.Instance.FireBullet(firePoint.position, dir.normalized, 2, pattern.Speed, pattern.BulletDatas[0].bulletId);
             }
 
-            angle += pattern.spiralSpeed * Time.deltaTime;
-            yield return new WaitForSeconds(pattern.fireRate);
+            angle += pattern.SpiralSpeed * Time.deltaTime;
+            yield return new WaitForSeconds(pattern.FireRate);
         }
     }
 }

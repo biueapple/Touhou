@@ -4,15 +4,17 @@ using UnityEngine;
 public class BulletShooter : MonoBehaviour
 {
     public PatternData[] patternDatas = null;
+    private Enemy enemy;
 
     private void Start()
     {
+        enemy = GetComponent<Enemy>();
         if (patternDatas == null)
             return;
 
         for(int i = 0; i < patternDatas.Length; i++)
         {
-            patternDatas[i].CreateInstance();
+            patternDatas[i].CreateInstance(enemy);
         }
     }
 

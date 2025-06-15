@@ -5,9 +5,9 @@ using UnityEngine;
 public class HomingBulletPattern : BulletPattern
 {
     //실제 작동할 클래스 생성
-    public override PatternInstance CreateInstance()
+    public override PatternInstance CreateInstance(Enemy enemy)
     {
-        return new HomingPatternInstance(this);
+        return new HomingPatternInstance(this, enemy);
     }
 }
 
@@ -16,7 +16,7 @@ public class HomingPatternInstance : PatternInstance
 {
     private readonly BulletPattern pattern;
 
-    public HomingPatternInstance(BulletPattern pattern)
+    public HomingPatternInstance(BulletPattern pattern, Enemy _)
     {
         this.pattern = pattern;
     }

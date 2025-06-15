@@ -8,5 +8,5 @@ public abstract class BulletPattern : ScriptableObject
     [SerializeField]
     protected AnimationCurve speed;
     public AnimationCurve Speed { get { return speed; } }
-    public abstract PatternInstance CreateInstance();
+    public abstract PatternInstance CreateInstance(Enemy enemy);
 }

@@ -31,7 +31,7 @@ public class Player_Ship : MonoBehaviour
 
     //현재 상태
     private IState state;
-    public IState State { get { return state; } set { state?.ExitState(); state = value; state.EnterState(); } }
+    public IState State { get { return state; } set { state?.ExitState(); state = value; state?.EnterState(); } }
     //평번한 상태
     private NomalState nomalState;
     public NomalState NomalState => nomalState;

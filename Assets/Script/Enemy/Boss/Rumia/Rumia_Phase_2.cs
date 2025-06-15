@@ -8,7 +8,7 @@ public class Rumia_Phase_2 : Phase
         boss.HP = boss.MaxHP;
         for (int i = 0; i < patternDatas.Length; i++)
         {
-            patternDatas[i].CreateInstance();
+            patternDatas[i].CreateInstance(boss);
         }
         //boss.BulletShooter.patternDatas = patternDatas;
         //패턴을 순서대로 사용하기 위한 준비
@@ -34,6 +34,14 @@ public class Rumia_Phase_2 : Phase
         }
 
         //일정 시간마다 랜덤하게 이동 (0번째는 사용하지 않음)
+        moveTimer += Time.deltaTime;
+        if (moveTimer >= moveTime)
+        {
+            boss.MoveObject.moveTypes = moveTypes[Random.Range(0, moveTypes.Length)].ToArray();
+            boss.MoveObject.currentPathIndex = 0;
+            moveTimer = 0;
+        }
+
 
         if (patternDatas == null)
             return;

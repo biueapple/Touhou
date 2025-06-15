@@ -49,3 +49,4 @@ MonoBehaviour:
     m_RotationOrder: 4
   bulletCount: 5
   angleStep: 1
+  delay: 0.2

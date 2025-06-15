@@ -17,7 +17,7 @@ public class ShiftState : IState
         this.collider = collider;
         this.center = center;
         this.ship = ship;
-        speed = 1;
+        speed = 1.5f;
     }
 
     //콜라이더와 속도 빨간점에 대한 코드들
