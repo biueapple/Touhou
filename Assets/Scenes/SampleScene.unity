@@ -1684,7 +1684,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 702ad36e166f37e43b9169db4f103e18, type: 2}
     - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
-<<<<<<< HEAD
       propertyPath: 'appearancePhase.moveTypes.Array.data[0]'
       value: 
       objectReference: {fileID: 653080937}
@@ -1699,10 +1698,6 @@ PrefabInstance:
     - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
       propertyPath: phase_1.patternDatas.Array.data[0].fireDelay
       value: 0.2
-=======
-      propertyPath: phase_1.patternDatas.Array.data[3].fireDelay
-      value: 3
->>>>>>> 87497ca (플레이어 공격에 기본 대미지 추가)
       objectReference: {fileID: 0}
     - target: {fileID: 6194916785111347564, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
       propertyPath: m_Name
