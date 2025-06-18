@@ -40,6 +40,7 @@ public class Enemy : MonoBehaviour
         if(Random.Range(0f, 1f) > probability)
             ItemManager.Instance.CreateItem(item.Type.ToString(), transform.position);
         STGManager.Instance.Enemies.Remove(this);
+        ScoreManager.Instance.Add(InfoStatic.kill);
         gameObject.SetActive(false);
     }
 }

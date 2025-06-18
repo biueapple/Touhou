@@ -15,4 +15,9 @@ public static class InfoStatic
     public static float ScreenRight = 5;
     public static float ScreenTop = 5;
     public static float ScreenBot = -5;
+    //Á¡¼ö
+    public static uint hit = 100;
+    public static uint kill = 1000;
+    public static uint point1 = 1000;
+    public static uint point10 = 10000;
 }

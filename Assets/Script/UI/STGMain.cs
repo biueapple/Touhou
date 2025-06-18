@@ -138,23 +138,28 @@ public class STGMain : MonoBehaviour
     {
         OnGameObject();
         Player.Instance.PlayMode = new RecordMode();
+        Player.Instance.Life = 2;
+        Player.Instance.Bomb = 2;
     }
 
     private void ExtraStart()
     {
-
+        //없애자
     }
 
     //일단은 그냥 로드하지만 파일들을 로드한 다음 선택해서 재생하도록 해야함
+    //점수와 이름도 옆에 띄워서 score 역할도 하자
     private void ReplayStart()
     {
         OnGameObject();
         Player.Instance.PlayMode = new ReplayMode();
+        Player.Instance.Life = 2;
+        Player.Instance.Bomb = 2;
     }
 
     private void Score()
     {
-
+        //리플레이에 넣자
     }
 
     private void Music()
@@ -176,6 +181,18 @@ public class STGMain : MonoBehaviour
     {
         OffGameObject();
     }
+
+
+
+
+
+
+
+
+
+
+
+
 
     private void SetColor(TextMeshProUGUI text, float alpha)
     {

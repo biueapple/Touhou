@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -21,13 +22,24 @@ public class Player : MonoBehaviour
 
     //格见
     private int life;
-    public int Life { get => life; set { life = value; } }
+    public int Life { get => life; set { life = value; onLifeChanged?.Invoke(life); } }
+    private event Action<int> onLifeChanged;
+    public event Action<int> OnLifeChanged
+    {
+        add => onLifeChanged += value;
+        remove => onLifeChanged -= value;
+    }
+
     //气藕
     private int bomb;
-    public int Bomb { get => bomb; set { bomb = value; } }
-    //痢荐
-    private int score;
-    public int Score { get => score; set { score = value; } }
+    public int Bomb { get => bomb; set { bomb = value; onBombChanged?.Invoke(bomb); } }
+    private event Action<int> onBombChanged;
+    public event Action<int> OnBombChanged
+    {
+        add => onBombChanged += value;
+        remove => onBombChanged -= value;
+    }
+
     //颇况
     [SerializeField]
     private float power;

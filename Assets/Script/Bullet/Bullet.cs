@@ -29,6 +29,7 @@ public class Bullet : MonoBehaviour
         if(other.TryGetComponent(out Enemy enemy))
         {
             enemy.HP -= damage;
+            ScoreManager.Instance.Add(InfoStatic.hit);
             ReturnToPool();
         }
         //플레이어의 기체와 충돌시 목숨을 하나 깍기

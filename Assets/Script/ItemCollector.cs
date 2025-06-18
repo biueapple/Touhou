@@ -47,10 +47,10 @@ public class ItemCollector : MonoBehaviour
                 Player.Instance.AddPower(1f);
                 break;
             case ITEMTYPE.POINT1:
-                Player.Instance.Score += 1;
+                ScoreManager.Instance.Add(InfoStatic.point1);
                 break;
             case ITEMTYPE.POINT10:
-                Player.Instance.Score += 10;
+                ScoreManager.Instance.Add(InfoStatic.point10);
                 break;
             case ITEMTYPE.LIFE:
                 Player.Instance.Life += 1;
