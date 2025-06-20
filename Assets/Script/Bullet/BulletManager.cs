@@ -57,4 +57,12 @@ public class BulletManager : MonoBehaviour
         RegisterBullet(bullet);
         return bullet;
     }
+
+    public void ClearBullet()
+    {
+        for(int i = activeBullets.Count - 1; i >= 0; i--)
+        {
+            UnregisterBullet(activeBullets[i]);
+        }
+    }
 }

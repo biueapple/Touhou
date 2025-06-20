@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
             if (instance == null)
             {
                 instance = FindFirstObjectByType<Player>();
-                if (instance == null)
+                if (instance == null && !IsQuitting)
                 {
                     instance = new GameObject("Player").AddComponent<Player>();
                 }
@@ -49,7 +49,14 @@ public class Player : MonoBehaviour
         set
         {
             power = Mathf.Min(value, 5);
+            onPowerChanged?.Invoke(power);
         }
+    }
+    private event Action<float> onPowerChanged;
+    public event Action<float> OnPowerChanged
+    {
+        add => onPowerChanged += value;
+        remove => onPowerChanged -= value;
     }
 
     //±‚√º
@@ -82,6 +89,7 @@ public class Player : MonoBehaviour
 
     public void PowerInit()
     {
+        Power = 0;
         if (ship != null)
             foreach (var weapon in ship.Module.Weapons)
                 weapon.CurrentDamage = 0;
@@ -128,5 +136,11 @@ public class Player : MonoBehaviour
         if(ship == null)
             return Vector3.zero;
         return ship.transform.position - transform.position;
+    }
+
+    private static bool IsQuitting = false;
+    private void OnApplicationQuit()
+    {
+        IsQuitting = true;
     }
 }

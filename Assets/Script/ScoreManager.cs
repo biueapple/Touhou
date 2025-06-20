@@ -9,7 +9,10 @@ public class ScoreManager : MonoBehaviour
         get
         {
             instance = instance != null ? instance : FindFirstObjectByType<ScoreManager>();
-            instance = instance != null ? instance : new GameObject("ScoreManager").AddComponent<ScoreManager>();
+            if (instance == null && !IsQuitting)
+            {
+                instance = new GameObject("ScoreManager").AddComponent<ScoreManager>();
+            }
             return instance;
         }
     }
@@ -40,5 +43,11 @@ public class ScoreManager : MonoBehaviour
     {
         score = 0;
         onScoreChanged(score);
+    }
+
+    private static bool IsQuitting = false;
+    private void OnApplicationQuit()
+    {
+        IsQuitting = true;
     }
 }

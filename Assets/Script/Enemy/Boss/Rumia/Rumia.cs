@@ -12,7 +12,8 @@ public class Rumia : Boss
         base.Start();
         appearancePhase.Init(this, phase_1, moveObject.moveTypes[0].ToArray());
         phase_1.Init(this, phase_2, new MoveType[2] { moveObject.moveTypes[1], moveObject.moveTypes[2] });
-        phase_2.Init(this, null, new MoveType[2] { moveObject.moveTypes[1], moveObject.moveTypes[2] });
+        phase_2.Init(this, lastPhase, new MoveType[2] { moveObject.moveTypes[1], moveObject.moveTypes[2] });
+        lastPhase.Init(this, null, null);
         moveObject.moveTypes = null;
 
         Now = appearancePhase;

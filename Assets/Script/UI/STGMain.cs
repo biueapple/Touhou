@@ -1,9 +1,9 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
-using static UnityEngine.Rendering.DebugUI;
 
 //ui를 만들었지만 삭제되어서 아직 사용중이지는 않는 스크립트 귀찮아서 모든 ui를 여기서 관리하려고 했지만 역시 나누는게 맞는듯
 public class STGMain : MonoBehaviour
@@ -47,6 +47,15 @@ public class STGMain : MonoBehaviour
     //일단은 테스트 용도
     [SerializeField]
     private Player_Ship ship;
+
+    [SerializeField]
+    private GameObject powerUI;
+    [SerializeField]
+    private GameObject lifeUI;
+    [SerializeField]
+    private GameObject bombUI;
+    [SerializeField]
+    private GameObject scoreUI;
 
     //모든 버튼들과 기능을 매칭시켜놓음 버튼과 onclick을 사용하지 않은 이유는 그냥 이게 더 편해서
     private readonly Dictionary<TextMeshProUGUI, Action> dictionary = new();
@@ -179,10 +188,15 @@ public class STGMain : MonoBehaviour
 
     public void MainMenu()
     {
-        OffGameObject();
+        StartCoroutine(MainMenuCoroutine());
     }
 
-
+    //바로 게임이 시작해버리는 문제 때문에 한 프레임 늦게 켜야 할듯
+    private IEnumerator MainMenuCoroutine()
+    {
+        yield return null;
+        OffGameObject();
+    }
 
 
 
@@ -210,7 +224,20 @@ public class STGMain : MonoBehaviour
         Player.Instance.AddPower(0.1f);
 
         //ui 설정
+        //start.gameObject.SetActive(false);
+        //extra.gameObject.SetActive(false);
+        //replay.gameObject.SetActive(false);
+        //score.gameObject.SetActive(false);
+        //music.gameObject.SetActive(false);
+        //option.gameObject.SetActive(false);
+        //exit.gameObject.SetActive(false);
         mainmenu.SetActive(false);
+
+        powerUI.SetActive(true);
+        lifeUI.SetActive(true);
+        bombUI.SetActive(true);
+        scoreUI.SetActive(true);
+
         foreach (var item in panelUI)
         {
             item.SetActive(true);
@@ -222,14 +249,28 @@ public class STGMain : MonoBehaviour
 
     private void OffGameObject()
     {
+        ScoreManager.Instance.Reset();
         //플레이어 기체 설정
-        Player.Instance.PlayMode = null;
         Player.Instance.PowerInit();
         Player.Instance.Ship = null;
         ship.gameObject.SetActive(false);
 
+
         //ui 설정
+        //start.gameObject.SetActive(true);
+        //extra.gameObject.SetActive(true);
+        //replay.gameObject.SetActive(true);
+        //score.gameObject.SetActive(true);
+        //music.gameObject.SetActive(true);
+        //option.gameObject.SetActive(true);
+        //exit.gameObject.SetActive(true);
         mainmenu.SetActive(true);
+
+        powerUI.SetActive(false);
+        lifeUI.SetActive(false);
+        bombUI.SetActive(false);
+        scoreUI.SetActive(false);
+
         foreach (var item in panelUI)
         {
             item.SetActive(false);

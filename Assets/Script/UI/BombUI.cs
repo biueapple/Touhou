@@ -9,17 +9,18 @@ public class BombUI : MonoBehaviour
 
     private void OnEnable()
     {
-        Player.Instance.OnBombChanged += UpdateScoreText;
+        Player.Instance.OnBombChanged += UpdateBombText;
     }
 
-    private void UpdateScoreText(int bomb)
+    private void UpdateBombText(int bomb)
     {
         bombText.text = " Bomb : " + bomb;
     }
 
     private void OnDisable()
     {
-        Player.Instance.OnBombChanged -= UpdateScoreText;
+        if (Player.Instance != null)
+            Player.Instance.OnBombChanged -= UpdateBombText;
         bombText.text = "";
     }
 }

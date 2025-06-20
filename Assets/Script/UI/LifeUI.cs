@@ -19,7 +19,8 @@ public class LifeUI : MonoBehaviour
 
     private void OnDisable()
     {
-        Player.Instance.OnLifeChanged -= UpdateLifeText;
+        if(Player.Instance != null)
+            Player.Instance.OnLifeChanged -= UpdateLifeText;
         lifeText.text = "";
     }
 }

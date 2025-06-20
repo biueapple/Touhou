@@ -46,7 +46,7 @@ public class Replay : MonoBehaviour
     }
 
     //키 기록하는 메소드
-    public void RecordInput()
+    public FrameInput RecordInput()
     {
         FrameInput input = new()
         {
@@ -60,6 +60,7 @@ public class Replay : MonoBehaviour
         };
 
         inputRecord.Add(input);
+        return input;
     }
 
     //현재 프레임
@@ -84,10 +85,10 @@ public class Replay : MonoBehaviour
     }
 
     //리플레이를 저장
-    public void SaveReplay()
+    public void SaveReplay(string name)
     {
         string json = JsonUtility.ToJson(new InputRecordWrapper { frames = inputRecord });
-        string fileName = "replay_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".json";
+        string fileName = "replay_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + "_" + name + ".json";
         string path = Path.Combine(Application.persistentDataPath, fileName);
         File.WriteAllText(path, json);
     }

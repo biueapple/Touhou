@@ -37,7 +37,7 @@ public class Enemy : MonoBehaviour
 
     public void Dead()
     {
-        if(Random.Range(0f, 1f) > probability)
+        if(item != null && Random.Range(0f, 1f) > probability)
             ItemManager.Instance.CreateItem(item.Type.ToString(), transform.position);
         STGManager.Instance.Enemies.Remove(this);
         ScoreManager.Instance.Add(InfoStatic.kill);

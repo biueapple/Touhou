@@ -42,12 +42,10 @@ public class BossHPUI : MonoBehaviour
             back.SetActive(true);
             hp.gameObject.SetActive(true);
         }
-            
         else
         {
             back.SetActive(false);
             hp.gameObject.SetActive(false);
         }
-            
     }
 }

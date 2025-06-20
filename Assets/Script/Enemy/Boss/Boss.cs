@@ -15,6 +15,8 @@ public abstract class Boss : Enemy
     //초기 상태
     [SerializeField]
     protected AppearancePhase appearancePhase;
+    [SerializeField]
+    protected BossDeadPhase lastPhase;
 
     //현재 상태
     protected Phase now;

@@ -4,6 +4,16 @@ using UnityEngine;
 //적의 소환을 담당하는 클래스
 public class WaveSpawner : MonoBehaviour
 {
+    private static WaveSpawner insatnce = null;
+    public static WaveSpawner Instance
+    {
+        get
+        {
+            insatnce = insatnce != null ? insatnce : FindFirstObjectByType<WaveSpawner>();
+            return insatnce;
+        }
+    }
+
     //적의 소한에 대한 정보
     public EnemySpawnData[] wave;
     //현재 타이머
@@ -43,5 +53,10 @@ public class WaveSpawner : MonoBehaviour
         }
         enemy.gameObject.SetActive(true);
         return enemy;
+    }
+
+    public void Reset()
+    {
+        timer = 0;
     }
 }
