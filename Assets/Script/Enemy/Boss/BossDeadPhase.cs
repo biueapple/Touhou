@@ -8,7 +8,8 @@ public class BossDeadPhase : Phase
         boss.Dead();
         BossHPUI.Instance.SetBoss(null);
         BulletManager.Instance.ClearBullet();
-        GameClearUI.Instance.Open();
+        //GameClearUI.Instance.Open();
+        Player.Instance.PlayMode.GameEnd();
     }
 
     public override void Excute()

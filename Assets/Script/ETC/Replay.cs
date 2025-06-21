@@ -5,7 +5,8 @@ using System.Linq;
 using UnityEngine;
 
 //플레이어의 입력값
-public struct FrameInput
+[Serializable]
+public class FrameInput
 {
     public bool Up;
     public bool Down;
@@ -32,11 +33,11 @@ public class Replay : MonoBehaviour
 
 
     //플레이어가 입력한 모든 입력값을 기록
-    List<FrameInput> inputRecord = new();
+    public List<FrameInput> inputRecord = new();
     //리플레이 저장한걸 불러옴
     string[] files = null;
 
-    private void Start()
+    private void Awake()
     {
         insatnce = this;
         //모든 리플레이 불러오기
@@ -87,7 +88,7 @@ public class Replay : MonoBehaviour
     //리플레이를 저장
     public void SaveReplay(string name)
     {
-        string json = JsonUtility.ToJson(new InputRecordWrapper { frames = inputRecord });
+        string json = JsonUtility.ToJson(new InputRecordWrapper { frames = inputRecord, score = ScoreManager.Instance.Score, name = name });
         string fileName = "replay_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + "_" + name + ".json";
         string path = Path.Combine(Application.persistentDataPath, fileName);
         File.WriteAllText(path, json);
@@ -97,6 +98,36 @@ public class Replay : MonoBehaviour
     public void LoadAll()
     {
         files = Directory.GetFiles(Application.persistentDataPath, "replay_*.json");
+    }
+
+    public List<InputRecordWrapper> FileToInputRecordWrapper()
+    {
+        List<InputRecordWrapper> replays = new List<InputRecordWrapper>();
+        if (files == null)
+            return replays;
+
+        foreach (var file in files)
+        {
+            string json = File.ReadAllText(file);
+
+            if (!string.IsNullOrEmpty(json))
+            {
+                try
+                {
+                    InputRecordWrapper wrapper = JsonUtility.FromJson<InputRecordWrapper>(json);
+                    if (wrapper != null && wrapper.frames != null)
+                    {
+                        replays.Add(wrapper);
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.LogWarning($"Failed to load replay from file: {file}, error: {e.Message}");
+                }
+            }
+        }
+
+        return replays;
     }
 
     //파일 이름으로 리플레이 입력값 불러오기
@@ -133,5 +164,7 @@ public class Replay : MonoBehaviour
 [Serializable]
 public class InputRecordWrapper
 {
+    public string name;
+    public uint score;
     public List<FrameInput> frames;
 }

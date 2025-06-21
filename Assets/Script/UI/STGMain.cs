@@ -67,6 +67,9 @@ public class STGMain : MonoBehaviour
     private readonly float alpha = 0.4901961f;
 
 
+    [SerializeField]
+    private ReplayWindow replayWindow;
+
     private void Start()
     {
         insatnce = this;
@@ -160,10 +163,12 @@ public class STGMain : MonoBehaviour
     //점수와 이름도 옆에 띄워서 score 역할도 하자
     private void ReplayStart()
     {
-        OnGameObject();
-        Player.Instance.PlayMode = new ReplayMode();
-        Player.Instance.Life = 2;
-        Player.Instance.Bomb = 2;
+        //OnGameObject();
+        //Player.Instance.PlayMode = new ReplayMode();
+        //Player.Instance.Life = 2;
+        //Player.Instance.Bomb = 2;
+        replayWindow.gameObject.SetActive(true);
+        mainmenu.gameObject.SetActive(false);
     }
 
     private void Score()
@@ -188,6 +193,8 @@ public class STGMain : MonoBehaviour
 
     public void MainMenu()
     {
+        STGManager.Instance.Playing = false;
+        WaveSpawner.Instance.Reset();
         StartCoroutine(MainMenuCoroutine());
     }
 
@@ -215,7 +222,7 @@ public class STGMain : MonoBehaviour
         text.color = color;
     }
 
-    private void OnGameObject()
+    public void OnGameObject()
     {
         //플레이어 기체 설정
         Player.Instance.Ship = ship;

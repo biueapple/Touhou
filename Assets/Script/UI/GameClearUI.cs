@@ -91,7 +91,10 @@ public class GameClearUI : MonoBehaviour
     private void Save()
     {
         if(inputField.text.Length != 0)
+        {
             Replay.Instance.SaveReplay(inputField.text);
+            Replay.Instance.LoadAll();
+        }
     }
 
     private void Main()

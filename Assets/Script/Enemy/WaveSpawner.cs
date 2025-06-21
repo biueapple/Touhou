@@ -17,6 +17,7 @@ public class WaveSpawner : MonoBehaviour
     //적의 소한에 대한 정보
     public EnemySpawnData[] wave;
     //현재 타이머
+    [SerializeField]
     private float timer;
     //어디까지 소환했는가
     private int spawnIndex;
@@ -58,5 +59,6 @@ public class WaveSpawner : MonoBehaviour
     public void Reset()
     {
         timer = 0;
+        spawnIndex = 0;
     }
 }
