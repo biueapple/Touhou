@@ -49,11 +49,14 @@
 
 ### 필드
 ![필드1](./Screenshots/touhou1.png)
+
 ![필드2](./Screenshots/touhou2.png)
 
 ### 보스 패턴
 ![패턴1](./Screenshots/touhou3.png)
+
 ![패턴2](./Screenshots/touhou4.png)
+
 ![패턴3](./Screenshots/touhou5.png)
 
 ### 리플레이
