@@ -53,14 +53,29 @@ public class STGManager : MonoBehaviour
 
     private void Update()
     {
-        if (!playing)
-            return;
-
-        //올바른 범위 안에 들어온 적만 공격을 하도록 (화면 밖으로 나간 적이 공격을 해선 안됌)
-        for (int i = 0; i < enemies.Count; i++)
+        if(playing)
         {
-            enemies[i].BulletShooter.Tick();
+            //올바른 범위 안에 들어온 적만 공격을 하도록 (화면 밖으로 나간 적이 공격을 해선 안됌)
+            for (int i = 0; i < enemies.Count; i++)
+            {
+                enemies[i].BulletShooter.Tick();
+            }
+            waveSpawner.Flow();
         }
-        waveSpawner.Flow();
+        else
+        {
+
+        }
+    }
+
+    public void Reset()
+    {
+        for(int i = 0; i < enemies.Count; i++)
+        {
+            enemies[i].gameObject.SetActive(false);
+        }
+        enemies.Clear();
+        waveSpawner.Reset();
+        playing = false;
     }
 }

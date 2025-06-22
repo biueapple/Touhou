@@ -16,11 +16,22 @@ public class WaveSpawner : MonoBehaviour
 
     //적의 소한에 대한 정보
     public EnemySpawnData[] wave;
+    private Enemy[] pool;
+
     //현재 타이머
     [SerializeField]
     private float timer;
     //어디까지 소환했는가
     private int spawnIndex;
+
+    private void Start()
+    {
+        pool = new Enemy[wave.Length];
+        for(int i = 0; i < wave.Length; i++)
+        {
+            pool[i] = CreateEnemy(wave[i].enemyPrefab, wave[i].moveTypes);
+        }
+    }
 
     public void Flow()
     {
@@ -32,8 +43,10 @@ public class WaveSpawner : MonoBehaviour
         //타이머에 해당하는 적을 전부 생성
         while (spawnIndex < wave.Length && timer >= wave[spawnIndex].spawnTime)
         {
-            EnemySpawnData data = wave[spawnIndex];
-            CreateEnemy(data.enemyPrefab, data.moveTypes);
+            pool[spawnIndex].transform.position = wave[spawnIndex].moveTypes[0].Point[0].position;
+            pool[spawnIndex].gameObject.SetActive(true);
+            if (pool[spawnIndex].TryGetComponent(out Boss boss))
+                BossHPUI.Instance.SetBoss(boss);
             spawnIndex++;
         }
     }
@@ -48,11 +61,7 @@ public class WaveSpawner : MonoBehaviour
         {
             move.moveTypes = moveTypes.ToArray();
         }
-        if(enemy.TryGetComponent(out Boss boss))
-        {
-            BossHPUI.Instance.SetBoss(boss);
-        }
-        enemy.gameObject.SetActive(true);
+        enemy.gameObject.SetActive(false);
         return enemy;
     }
 

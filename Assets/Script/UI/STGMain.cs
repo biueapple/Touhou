@@ -69,6 +69,8 @@ public class STGMain : MonoBehaviour
 
     [SerializeField]
     private ReplayWindow replayWindow;
+    [SerializeField]
+    private InGameUI inGame;
 
     private void Start()
     {
@@ -98,6 +100,25 @@ public class STGMain : MonoBehaviour
 
     private void Update()
     {
+        //if(STGManager.Instance.Playing)
+        //{
+        //    if(Input.GetKeyDown(KeyCode.Escape))
+        //    {
+        //        STGManager.Instance.Playing = false;
+        //        Time.timeScale = 0;
+        //        inGame.gameObject.SetActive(true);
+        //    }
+        //}
+        //else
+        //{
+        //    if (Input.GetKeyDown(KeyCode.Escape))
+        //    {
+        //        STGManager.Instance.Playing = true;
+        //        Time.timeScale = 1;
+        //        inGame.gameObject.SetActive(false);
+        //    }
+        //}
+
         if (!mainmenu.activeSelf)
             return;
 
@@ -193,8 +214,7 @@ public class STGMain : MonoBehaviour
 
     public void MainMenu()
     {
-        STGManager.Instance.Playing = false;
-        WaveSpawner.Instance.Reset();
+        STGManager.Instance.Reset();
         StartCoroutine(MainMenuCoroutine());
     }
 

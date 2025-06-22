@@ -1219,6 +1219,8 @@ MonoBehaviour:
   itemPrefab: {fileID: 9128519395676801362, guid: 41f58fd600761aa4faff9ce7f05bd1a4, type: 3}
   contentParent: {fileID: 241890036}
   exit: {fileID: 715922490}
+  scrollRect: {fileID: 1090350381}
+  visibleItemCount: 5
 --- !u!1 &154441238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1746,6 +1748,7 @@ GameObject:
   m_Component:
   - component: {fileID: 241890036}
   - component: {fileID: 241890037}
+  - component: {fileID: 241890038}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -1770,7 +1773,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 300}
+  m_SizeDelta: {x: -500, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &241890037
 MonoBehaviour:
@@ -1793,11 +1796,25 @@ MonoBehaviour:
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
+  m_ChildControlWidth: 1
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &241890038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241890035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
 --- !u!1 &257312988
 GameObject:
   m_ObjectHideFlags: 0
@@ -2157,6 +2174,7 @@ MonoBehaviour:
   bombUI: {fileID: 605943531}
   scoreUI: {fileID: 514141788}
   replayWindow: {fileID: 153531911}
+  inGame: {fileID: 0}
 --- !u!114 &313844461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3220,12 +3238,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: phase_3.moveTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
       propertyPath: phase_1.patternDatas.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: phase_2.patternDatas.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
-      propertyPath: phase_1.patternDatas.Array.data[1].timer
+      propertyPath: phase_3.patternDatas.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: phase_1.patternDatas.Array.data[1].timer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
       propertyPath: phase_1.patternDatas.Array.data[2].timer
@@ -3233,12 +3263,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
       propertyPath: phase_1.patternDatas.Array.data[3].timer
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: phase_1.patternDatas.Array.data[0].pattern
+      value: 
+      objectReference: {fileID: 11400000, guid: 6fc1b556c2296db4b950c11974f08063, type: 2}
     - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
       propertyPath: phase_1.patternDatas.Array.data[1].pattern
       value: 
-      objectReference: {fileID: 11400000, guid: 53e34799e1e9dfe469539d461e83f909, type: 2}
+      objectReference: {fileID: 11400000, guid: 702ad36e166f37e43b9169db4f103e18, type: 2}
     - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
       propertyPath: phase_1.patternDatas.Array.data[2].pattern
       value: 
@@ -3246,14 +3280,34 @@ PrefabInstance:
     - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
       propertyPath: phase_1.patternDatas.Array.data[3].pattern
       value: 
-      objectReference: {fileID: 11400000, guid: 702ad36e166f37e43b9169db4f103e18, type: 2}
+      objectReference: {fileID: 11400000, guid: bd9d6c0254e30b446851892abebeb817, type: 2}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: phase_2.patternDatas.Array.data[2].pattern
+      value: 
+      objectReference: {fileID: 11400000, guid: 8c51445da3c06d04b97ae3c418a424b8, type: 2}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: phase_2.patternDatas.Array.data[3].pattern
+      value: 
+      objectReference: {fileID: 11400000, guid: 8c51445da3c06d04b97ae3c418a424b8, type: 2}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: phase_3.patternDatas.Array.data[0].pattern
+      value: 
+      objectReference: {fileID: 11400000, guid: 0740ab946edc163459d959a9d7d31c1b, type: 2}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: phase_3.patternDatas.Array.data[1].pattern
+      value: 
+      objectReference: {fileID: 11400000, guid: bd9d6c0254e30b446851892abebeb817, type: 2}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: phase_3.patternDatas.Array.data[2].pattern
+      value: 
+      objectReference: {fileID: 11400000, guid: ac1675c991562f0448532918f04c7b0f, type: 2}
     - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
       propertyPath: phase_1.patternDatas.Array.data[0].fireDelay
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
       propertyPath: phase_1.patternDatas.Array.data[1].fireDelay
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
       propertyPath: phase_1.patternDatas.Array.data[2].fireDelay
@@ -3261,7 +3315,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
       propertyPath: phase_1.patternDatas.Array.data[3].fireDelay
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: phase_2.patternDatas.Array.data[2].fireDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: phase_2.patternDatas.Array.data[3].fireDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: phase_3.patternDatas.Array.data[0].fireDelay
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: phase_3.patternDatas.Array.data[1].fireDelay
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786694352317522571, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
+      propertyPath: phase_3.patternDatas.Array.data[2].fireDelay
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6194916785111347564, guid: 7c372dd03856b7f4da23d7e6db8b430d, type: 3}
       propertyPath: m_Name

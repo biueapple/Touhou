@@ -103,7 +103,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         //기체가 없다면 아무것도 하지 않음
-        if (ship == null)
+        if (ship == null || !STGManager.Instance.Playing)
             return;
 
         playMode?.Update();

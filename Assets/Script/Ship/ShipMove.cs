@@ -17,13 +17,14 @@ public class ShipMove : MonoBehaviour
 
     private void Move()
     {
+        velocity = speed * Time.deltaTime * velocity;
         if (velocity.x > 0f)
             animator.SetInteger("Move", 1); //right
         else if (velocity.x < 0f)
             animator.SetInteger("Move", 2);    //left
         else
             animator.SetInteger("Move", 0);
-        transform.position += speed * Time.deltaTime * velocity;
+        transform.position += velocity;
         velocity = Vector3.zero;
     }
 }

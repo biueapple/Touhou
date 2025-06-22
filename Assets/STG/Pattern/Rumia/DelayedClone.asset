@@ -10,30 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e39799be809ccc499b8b6799d47f713, type: 3}
-  m_Name: Homing Bullet Pattern
+  m_Name: DelayedClone
   m_EditorClassIdentifier: 
   bulletDatas:
-  - {fileID: 11400000, guid: f3b7fa4893c981c45b43e880191d2bda, type: 2}
+  - {fileID: 11400000, guid: a13e0769ac44f87469743ddfb52d7c00, type: 2}
   speed:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.06002602
-      value: 1.9966586
+      time: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.33333334
+      outWeight: 0
     - serializedVersion: 3
-      time: 0.93997395
-      value: 1.9966586
+      time: 1
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 34
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2

@@ -162,7 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 1697590553382550550, guid: 6ccf03166b2105c4aa31993a4fd439a1, type: 3}
   probability: 0.3
-  hp: 5
+  hp: 100
 --- !u!114 &4693241313579186565
 MonoBehaviour:
   m_ObjectHideFlags: 0

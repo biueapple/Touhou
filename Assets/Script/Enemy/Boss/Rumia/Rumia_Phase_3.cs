@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [System.Serializable]
-public class Rumia_Phase_2 : Phase
+public class Rumia_Phase_3 : Phase
 {
     public override void Enter()
     {
@@ -10,9 +10,7 @@ public class Rumia_Phase_2 : Phase
         {
             patternDatas[i].CreateInstance(boss);
         }
-        //boss.BulletShooter.patternDatas = patternDatas;
-        //패턴을 순서대로 사용하기 위한 준비
-        //patternDatas[0].timer = patternDatas[0].fireDelay;
+        boss.MoveObject.moveTypes = moveTypes[0].ToArray();
     }
 
 
@@ -33,31 +31,8 @@ public class Rumia_Phase_2 : Phase
             }
         }
 
-        //일정 시간마다 랜덤하게 이동
-        moveTimer += Time.deltaTime;
-        if (moveTimer >= moveTime)
-        {
-            boss.MoveObject.moveTypes = moveTypes[Random.Range(0, moveTypes.Length)].ToArray();
-            boss.MoveObject.currentPathIndex = 0;
-            moveTimer = 0;
-        }
-
-
         if (patternDatas == null)
             return;
-
-        //패턴을 순서대로 사용
-        //if (index >= patternDatas.Length)
-        //    index = 0;
-
-        //patternDatas[index].timer += Time.deltaTime;
-        //if (patternDatas[index].timer >= patternDatas[index].fireDelay)
-        //{
-        //    patternDatas[index].patternInstance.Fire(boss.transform); // 현재 위치에서 발사
-        //    patternDatas[index].timer = 0f;
-        //    index++;
-        //}
-
 
         //모든 패턴을 동시에 사용하는 방법
         for (int i = 0; i < patternDatas.Length; i++)
