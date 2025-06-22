@@ -47,17 +47,17 @@
 ## 📸 스크린샷 / 영상
 > (아래 이미지 파일을 `Screenshots` 폴더에 넣고 연결해 주세요)
 
-### 기본 탄막
-![탄막1](./Screenshots/touhou1.png)
+### 필드
+![필드1](./Screenshots/touhou1.png)
+![필드2](./Screenshots/touhou2.png)
 
-### 삼각 탄막
-![탄막2](./Screenshots/touhou2.png)
+### 보스 패턴
+![패턴1](./Screenshots/touhou3.png)
+![패턴2](./Screenshots/touhou4.png)
+![패턴3](./Screenshots/touhou5.png)
 
-### 나선 탄막
-![탄막3](./Screenshots/touhou3.png)
-
-### UI (파워, 목숨)
-![UI](./Screenshots/touhou_ui.png)
+### 리플레이
+![리플레이](./Screenshots/touhou6.png)
 
 ---
 
