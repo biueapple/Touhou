@@ -13,6 +13,7 @@ public class FrameInput
     public bool Left;
     public bool Right;
     public bool Fire;
+    public bool bomb;
     public bool ShiftDown;
     public bool ShiftUp;
 }
@@ -56,6 +57,7 @@ public class Replay : MonoBehaviour
             Left = Input.GetKey(KeyCode.LeftArrow),
             Right = Input.GetKey(KeyCode.RightArrow),
             Fire = Input.GetKey(KeyCode.Z),
+            bomb = Input.GetKeyDown(KeyCode.X),
             ShiftDown = Input.GetKeyDown(KeyCode.LeftShift),
             ShiftUp = Input.GetKeyUp(KeyCode.LeftShift)
         };

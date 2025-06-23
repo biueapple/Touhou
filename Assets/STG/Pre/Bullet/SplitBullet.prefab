@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3521848249854224646}
   - component: {fileID: 7108294093136211313}
   - component: {fileID: 5496271852858032886}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SplitBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

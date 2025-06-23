@@ -123,6 +123,8 @@ public class Player : MonoBehaviour
             velocity += Vector3.right;
         if (frameInput.Fire)
             ship.Fire();
+        if (frameInput.bomb)
+            BombManager.Instance.Bomb();
         if (frameInput.ShiftUp)
             ship.State = ship.NomalState;
         if (frameInput.ShiftDown)

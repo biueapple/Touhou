@@ -17,6 +17,7 @@ public class BulletManager : MonoBehaviour
 
     //현재 활성화 상태인 총알들
     private readonly List<Bullet> activeBullets = new();
+    public List<Bullet> ActiveBullets => activeBullets;
 
     private void Awake()
     {
