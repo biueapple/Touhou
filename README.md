@@ -16,7 +16,7 @@
 ### 🎯 탄막 패턴 시스템
 - 패턴별 ScriptableObject 및 Phase 설계로 유연한 보스 패턴 구성
 - Spiral, Triangle Spread, Random Shower 등 다양한 탄막 구현
-- Coroutine 기반 타이밍 컨트롤 (PatternScheduler 준비 중)
+- Coroutine 기반 타이밍 컨트롤
 
 ### 🔄 탄 모션 구조
 - 각 탄에 Sin, Zigzag, Bounce, Accelerate 등 다양한 이동 모션 부여
@@ -27,13 +27,13 @@
 - 이후 체력 기반 전환, 시간 기반 순환, 랜덤 반복 가능성 고려 중
 
 ### 🎮 플레이어 컨트롤
-- 이동/사격 입력 구현
-- 목숨/파워 UI 연동 및 텍스트 실시간 갱신
+- 이동/사격/폭탄 입력 구현
+- 목숨/파워/폭탄 UI 연동 및 텍스트 실시간 갱신
 - 충돌 판정 및 무적 시간
 - 리플레이 구현
 
 ### 📊 UI 시스템
-- 목숨, 파워, 점수 텍스트 UI 구현
+- 목숨, 파워, 점수, 폭탄 텍스트 UI 구현
 
 ---
 
